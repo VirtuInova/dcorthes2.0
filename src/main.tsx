@@ -7,7 +7,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './Home/index.tsx'
 import Sobre from './Sobre/index.tsx'
 import Products from './Products/index.tsx'
 import Header from './Header/index.tsx'

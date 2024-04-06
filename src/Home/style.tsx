@@ -68,8 +68,8 @@ export function Container (){
         <div className="h-[20vw]" style={{backgroundImage:bg2}}>
             <Carousel responsive={responsive} className="w-full h-full">
                     {
-                        churrascoListOvine.map((index) => (
-                            <div key={index} className="w-[90%] h-full flex items-center justify-center">
+                        churrascoListOvine.map(() => (
+                            <div className="w-[90%] h-full flex items-center justify-center">
                                 <div className="w-[10vw] h-[10vw] bg-black rounded-full flex items-center justify-center">
                                     <h1 className="text-white">PESSOA</h1>
                                 </div>

@@ -1,4 +1,4 @@
-import { buttonHeader, insta, logoFoot, spotify, yt } from "../assets"
+import {insta, logoFoot, spotify, yt } from "../assets"
 
 type informations = {
     nome: string
