@@ -96,6 +96,10 @@ export function Container (){
             
             </div>
         </div>
+
+        <div>
+            
+        </div>
     </div>)
 } 
 
@@ -148,7 +152,7 @@ function Products(lista: Lista[]){
                         <div key={index.nome} className="w-[50%]">
                             <div className="h-[10vw] w-[20vw] overflow-hidden rounded-[1vw]">
                             <div className={`flex h-full`}  style={{alignItems:"center"}}>
-                                <img src={index.src} className="object-contain" />
+                            <a href={`/nutricional/${index.nome}`}><img src={index.src} className="object-contain" /></a>
                             </div>
                             </div>
                             <div className="w-[20vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw]"><h1>{index.nome}</h1></div>

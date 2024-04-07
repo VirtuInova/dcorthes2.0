@@ -8,9 +8,9 @@ type Lista = {
     src: string
 }
 const lista: Lista[] = [
-    {nome: "Costela-Especial" , src: costela},
-    {nome: "Guisado-Pescoço", src:guisado}, 
-    {nome:"Paleta", src:paleta},
-    {nome:"Sarapatel", src:sarapatel}
+    {nome: "Costela-Especial Ovino" , src: costela},
+    {nome: "Guisado-Pescoço Ovino", src:guisado}, 
+    {nome:"Paleta Ovino", src:paleta},
+    {nome:"Sarapatel Ovino", src:sarapatel}
 ]
 export default lista

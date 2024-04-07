@@ -11,6 +11,8 @@ import Sobre from './Sobre/index.tsx'
 import Products from './Products/index.tsx'
 import Header from './Header/index.tsx'
 import { Footer } from './Footer/index.tsx'
+import Cortes from './NossosCortes/index.tsx'
+import Nutricional from './Nutricional/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/produtos",
     element: <Products />,
+  },
+  {
+    path: "/cortes",
+    element: <Cortes />,
+  },
+  {
+    path: "/nutricional/:nome",
+    element: <Nutricional />,
   },
 
 ]);

@@ -50,14 +50,16 @@ function Content (){
                     </div>
                 </div>
             </div>
-            {Image(embImg, "100%")}
+            <div className={`flex justify-center ml-[2vw] w-[50vw]`}  style={{alignItems:"center"}}>
+                <img src={embImg} width={"100%"} />
+            </div>
         </div>
        
     )
 }
 
 function Selection(){
-    const [text, setText] = useState("")
+    const [text, setText] = useState("Quando pensamos em um churrasco perfeito, a escolha dos cortes de carne é crucial. Existem certos cortes que são ideais para o seu churrasco, que irão garantir um sabor inigualável e uma experiência gastronômica memorável para você e seus convidados.")
     const [type, setType] = useState("01")
     const productsOvine : Lista[]=  type == "01" ? churrascoListOvine : type == "02" ? refeicaoOvine : type == "03" ? lanche : []
     const productsSuine : Lista[]=  type == "01" ? churrascoListSuine : type == "02" ? refeicaoSuine : []
@@ -100,20 +102,20 @@ const responsive = {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 2
     }
   };
 
 function Products(lista: Lista[]){
     return (
         <div className="w-[100%] mt-[2vw] mb-[2vw] h-[20vw] flex items-center">
-            <Carousel responsive={responsive} className="w-full h-full">
+            <Carousel  removeArrowOnDeviceType={["tablet", "mobile"]}  responsive={responsive} className="w-full h-full">
                 {
                     lista.map((index) => (
                         <div key={index.nome} className="w-[50%]">
                             <div className="h-[10vw] w-[20vw] overflow-hidden rounded-[1vw]">
                             <div className={`flex h-full`}  style={{alignItems:"center"}}>
-                                <img src={index.src} className="object-contain" />
+                                <a href={`/nutricional/${index.nome}`}><img src={index.src} className="object-contain" /></a>
                             </div>
                             </div>
                             <div className="w-[20vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw]"><h1>{index.nome}</h1></div>

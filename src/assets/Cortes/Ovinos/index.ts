@@ -1,3 +1,5 @@
+import esp from './Espetinho-Ovino.jpg'
+import ham from './Hamburguer-Ovino.jpg'
 import alcatra from './Alcatra-completa-Ovino.jpg'
 import carre from './Carré-Francês-Ovino.jpg'
 import costela from './Costela-Prime-Ovino.jpg'
@@ -13,13 +15,26 @@ import primeRib from './Prime-Rib-Ovino.jpg'
 import selaInglesa from './Sela-Inglesa-Ovino.jpg'
 import stinko from './Stinko-Ovino.jpg'
 import tbone from './T-Bone-Ovino.jpg'
+import cEspecial from './Costela-Especial-Ovino.jpg'
+import guisadoP from './Guisado-Pescoço-Ovino..jpg'
+import paleta from './Paleta-Ovino.jpg'
+import paletaD from './Paleta-Desossada-Ovino.jpg'
+import sarapatel from './Sarapatel-Ovino.jpg'
 
 type Lista = {
     nome: string
     src: string
 }
+
 const lista: Lista[] = [
-    {nome: "Alcatra Completa Ovino", src: alcatra},
+    {nome: "Costela Especial Ovino", src:cEspecial}, 
+    {nome: "Guisado Pescoço Ovino", src:guisadoP}, 
+    {nome: "Paleta Ovino", src:paleta}, 
+    {nome: "Paleta Desossada Ovino", src:paletaD}, 
+    {nome: "Sarapatel Ovino", src:sarapatel}, 
+    {nome: "Espetinho Ovino", src:esp}, 
+    {nome:"Hamburguer Ovino", src:ham},
+    {nome: "Alcatra Completa Ovino" , src: alcatra},
     {nome: "Carré Francês Ovino", src:carre}, 
     {nome:"Costela Prime Ovino", src:costela},
     {nome:"Costela Ripa Ovino", src:costelaripa},

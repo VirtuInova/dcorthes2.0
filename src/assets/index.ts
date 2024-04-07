@@ -17,4 +17,5 @@ import infancia from './fotos-infancia.png'
 import heroSobre from './bg-hero-sobre.png'
 import linhaTempo from './linha-tempo.png'
 import faq from './faq.png'
-export {faq, linhaTempo, porco,infancia,heroSobre,bg02,bg01, time, insta, logoFoot, ovine, spotify, suine, yt, logoHeader, buttonHeader, embImg, hero, hero2}
+import our from './our-productspng.png'
+export {our, faq, linhaTempo, porco,infancia,heroSobre,bg02,bg01, time, insta, logoFoot, ovine, spotify, suine, yt, logoHeader, buttonHeader, embImg, hero, hero2}
