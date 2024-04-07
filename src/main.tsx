@@ -13,6 +13,7 @@ import Header from './Header/index.tsx'
 import { Footer } from './Footer/index.tsx'
 import Cortes from './NossosCortes/index.tsx'
 import Nutricional from './Nutricional/index.tsx'
+import Mapa from './Mapa/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
     path: "/nutricional/:nome",
     element: <Nutricional />,
   },
-
+  {
+    path: "/mapa",
+    element: <Mapa />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

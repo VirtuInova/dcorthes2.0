@@ -65,7 +65,7 @@ export function Container (){
     
     return (
     <div className="w-full bg-[white]" style={{alignItems:"center"}}>
-        <div className={`w-full h-[45vw] px-[10vw] `} style={{backgroundImage:hs}}>
+        <div className={`w-full h-[45vw] px-[10vw] `} style={{backgroundImage:hs, backgroundSize: 'cover'}}>
             <div className="pl-[6vw]">
                 <h5 className="text-white text-left pt-[8vw]">Quem Somos</h5>
                 <div className="w-[40%]">
