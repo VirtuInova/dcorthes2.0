@@ -57,6 +57,9 @@ const data = {
 const styles = {
     titleTextColor: "black",
     rowTitleColor: "black",
+    titleTextSize: "2vw",
+    rowContentTextSize:"2vw",
+    rowTitleTextSize: "2vw"
 };
 
 
@@ -142,9 +145,9 @@ export function Container (){
                     </div>
                 </div>
 
-                <div className="bg-white mb-[10%] h-[50vw] flex justify-between px-[10vw] mt-[5vw]">
+                <div className="bg-white mb-[10%] h-[50vw] flex-wrap justify-between px-[10vw] mt-[5vw]">
                     <img src={faq} className="h-[30%]"></img>
-                    <div className="w-[50vw] h-[80vw]">
+                    <div className="h-[40vw] mt-[2%] overflow-y-scroll">
                         <Faq
                             data={data}
                             styles={styles}

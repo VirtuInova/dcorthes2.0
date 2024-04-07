@@ -278,7 +278,7 @@ export function Container (){
                     <div className='h-[30vw] w-[30vw] '>
                         <img src={corte?.src} className="object-cover h-full w-full rounded-[2vw]"/>
                     </div>
-                        <div className="w-[40%] ">
+                        <div className="w-[50%] ">
                                 <h2 className="text-black text-left text-[2.5vw] mb-[7%]">{nome}</h2>
                                 <h1 className="text-black text-justify mt-[2%]">{corteSelecionado?.descricao}</h1>
                         </div>

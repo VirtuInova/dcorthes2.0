@@ -71,13 +71,12 @@ function Image(){
 
 function Options(){
     return ( 
-        <div className="w-[50%] ml-[2%] flex row-auto justify-between">
+        <div className="w-[50%] ml-[5%] flex row-auto justify-between">
             <a href="/sobre"><h1 >Sobre</h1></a>
             <a href="/cortes"><h1>Nossos Cortes</h1></a>
             {/* <h1>Cozinha Nobre</h1> */}
             <a href="/produtos"><h1>Produtos</h1></a>
             {/* <h1>Parcerias</h1> */}
-            <a href="/#info"><h1 >Contato</h1></a>
         </div>
     )
 }
