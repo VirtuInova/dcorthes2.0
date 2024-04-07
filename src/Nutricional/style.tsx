@@ -270,7 +270,7 @@ export function Container (){
 
 
     return (
-    <div className="w-full bg-[white]" style={{alignItems:"center"}}>
+    <div className="w-full bg-[white] min-h-[100vh]" style={{alignItems:"center"}}>
         
         <div className="h-[100vw]">
             <div className={`w-full h-[40vw]`}>

@@ -15,7 +15,7 @@ type Lista = {
 
 export function Container (){
     return (
-    <div className="w-full  bg-[white] px-[10vw]" style={{alignItems:"center"}}>
+    <div className="w-full min-h-[100vh] bg-[white] px-[10vw]" style={{alignItems:"center"}}>
         {Content()}
         {Selection()}
         
