@@ -68,20 +68,20 @@ export function Container (){
     
     return (
     <div className="w-full bg-[white]" style={{alignItems:"center"}}>
-        <div className={`w-full h-[45vw] px-[10vw] `} style={{backgroundImage:hs, backgroundSize: 'cover'}}>
-            <div className="pl-[6vw]">
-                <h5 className="text-white text-left pt-[8vw]">Quem Somos</h5>
-                <div className="w-[40%]">
-                    <h1 className="text-left text-[1vw] mt-[5%]"> Somos a nova referência em <b>cortes primorosos de ovinos e suínos.</b></h1>
-                    <h1 className="text-left text-[1vw] mt-[5%]">  Nossos passos são firmes e guiados pelo cultivo da 
+        <div className={`w-full h-[45vw] px-[10vw]  max-[425px]:h-[110vw]`} style={{backgroundImage:hs, backgroundSize: 'cover'}}>
+            <div className="pl-[6vw] max-[425px]:pl-[0]">
+                <h5 className="text-white text-left pt-[8vw] max-[425px]:text-[6vw]">Quem Somos</h5>
+                <div className="w-[80%] max-[425px]:w-[90%]">
+                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw] "> Somos a nova referência em <b>cortes primorosos de ovinos e suínos.</b></h1>
+                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]" >  Nossos passos são firmes e guiados pelo cultivo da 
                     excelência. Nossa motivação é trazer produtos
                     impecáveis para o mercado gastronômico nacio
                     nal.</h1>
-                    <h1 className="text-left text-[1vw] mt-[5%]">  Enraizados no passado, mas com um olhar que 
+                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]">  Enraizados no passado, mas com um olhar que 
                     desafia o presente, a D’Corthes Carnes Nobres 
                     convida você a degustar não apenas a carne, mas 
                     a nossa essência – a pura arte de servir bem. </h1>
-                    <h1 className="text-left text-[1vw] mt-[5%]"> A D’Corthes Carnes Nobres destaca-se, ainda, 
+                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]"> A D’Corthes Carnes Nobres destaca-se, ainda, 
                     pela conformidade de sua Unidade de Beneficia
                     mento de Carnes em apresentar o Selo de Inspe
                     ção Estadual ADAPI/SIE/PI sob nº006/069.</h1>
@@ -90,45 +90,45 @@ export function Container (){
             
         </div>
         
-        <div className="h-[160vw]">
-            <div className={`w-full h-[40vw]`}>
-                <div className="flex justify-between px-[10vw] mt-[5%]">
-                        <div className="w-[40%] ">
-                                <h5 className="text-black text-left text-[2.5vw] mb-[7%]">Nossa história</h5>
-                                <h1 className="text-black text-left mt-[2%]"> Nós, da D’Corthes Carnes Nobres, temos uma história que nos enche de orgulho! </h1>
+        <div className="h-[160vw] max-[425px]:h-[400vw]">
+            <div className={`w-full h-[40vw] max-[425px]:h-[60vw]`}>
+                <div className="flex justify-between px-[10vw] max-[425px]:pr-[0] mt-[5%] max-[425px]:flex-wrap" >
+                        <div className="w-[40%] max-[425px]:w-[80%]">
+                                <h5 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[6vw]">Nossa história</h5>
+                                <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw]"> Nós, da D’Corthes Carnes Nobres, temos uma história que nos enche de orgulho! </h1>
                                 
-                                <h5 className="text-black text-left text-[2.5vw] mb-[7%] mt-[13%]">1991 - O começo</h5>
-                                <h1 className="text-black text-left mt-[2%]"> Anterior à nossa história e essencial para nosso sucesso, a Duporco 
+                                <h5 className="text-black text-left text-[2.5vw] mb-[7%] mt-[13%] max-[425px]:text-[6vw]">1991 - O começo</h5>
+                                <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify"> Anterior à nossa história e essencial para nosso sucesso, a Duporco 
                                 Agronegócio foi fundada em 1991, oriunda de uma pequena criação 
                                 de suínos no Povoado São Domingos, zona rural de Teresina (PI).</h1>
 
-                                <h2 className="text-black text-left mt-[2%]" >A D'Cortes é fruto de uma jornada inspiradora que começou há dé
+                                <h2 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify" >A D'Cortes é fruto de uma jornada inspiradora que começou há dé
                                 cadas, quando nossos fundadores perceberam a necessidade de 
                                 elevar os padrões da indústria de cortes de carne.</h2>
                         </div>
 
                     <div>
-                        <img src={infancia} className="h-[30vw]"></img>
+                        <img src={infancia} className="h-[30vw] max-[425px]:h-[70vw] max-[425px]:mt-[5vw]"></img>
                     </div>
                 </div>
             
-                <div className="flex w-full">
-                    <img src={porco} className="h-[15vw]"></img>
-                    <div className="flex justify-center w-[50%] ml-[2vw]">
-                        <img src={linhaTempo} className="object-contain h-[15vw]"></img>
+                <div className="flex w-full max-[425px]:mt-[20vw]">
+                    <img src={porco} className="h-[15vw] max-[425px]:h-[25vw]"></img>
+                    <div className="flex justify-center w-[50%] max-[425px]:w-[65%]  ml-[2vw]">
+                        <img src={linhaTempo} className="object-contain h-[15vw] max-[425px]:h-[25vw] "></img>
                     </div>
                 </div>
 
-                <div className="bg-black h-[50vw]">
-                    <h5 className="text-white pt-[3%]">Aqui todos os MOMENTOS são nobres!</h5>
-                    <div className="flex items-end h-full justify-between px-[10vw]">
-                        <div className="w-[30%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
-                            <h2 className="text-black text-[2vw] text-left" >Missão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
+                <div className="bg-black h-[50vw] max-[425px]:h-[120vw]">
+                    <h5 className="text-white pt-[3%] max-[425px]:text-[4vw]">Aqui todos os MOMENTOS são nobres!</h5>
+                    <div className="flex items-end max-[425px]:items-center h-full max-[425px]:h-[90%] justify-between max-[425px]:mt-[2%] px-[10vw] max-[425px]:flex-wrap">
+                        <div className="w-[30%] max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[30vw]  rounded-[1vw]">
+                            <h2 className="text-black text-[2w] text-left max-[425px]:text-[4vw]" >Missão</h2>
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[2.3vw]">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
                         </div>
-                        <div className="w-[30%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
-                            <h2 className="text-black text-[2vw] text-left" >Visão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify">Sonhamos grande! Queremos ser o nome 
+                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[1%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                            <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Visão</h2>
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[2.3vw]">Sonhamos grande! Queremos ser o nome 
                             que vem à mente e ao coração quando se 
                             pensa em alimentos de origem animal. 
                             Almejamos ser uma referência, não só 
@@ -137,9 +137,9 @@ export function Container (){
                             relacionamos com clientes, colaborado
                             res e fornecedores. </h1>
                         </div>
-                        <div className="w-[30%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
-                            <h2 className="text-black text-[2vw] text-left" >Valores</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-left">Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
+                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[2%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                            <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Valores</h2>
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-left max-[425px]:text-[2.3vw]" >Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
                         </div>
                     
                     </div>

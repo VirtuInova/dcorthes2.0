@@ -12,7 +12,7 @@ type Lista = {
 
 export function Container (){
     return (
-    <div className="w-full min-h-[100vh] bg-[white] px-[10vw]" style={{alignItems:"center"}}>
+    <div className="w-full min-h-[100vh] h-full bg-[white] px-[10vw]" style={{alignItems:"center"}}>
         {Content()}
         {Selection()}
         
@@ -21,7 +21,7 @@ export function Container (){
 
 function Image(src: string, width: string){
     return (
-        <div className={`flex justify-center ml-[2vw] w-[90vw]`}  style={{alignItems:"center"}}>
+        <div className={`flex justify-center ml-[2vw] w-[90vw] max-[425px]:w-[40vw]`}  style={{alignItems:"center"}}>
             <img src={src} width={width} />
         </div>
     
@@ -30,13 +30,15 @@ function Image(src: string, width: string){
 
 function Content (){
     return (
-        <div className="flex mt-[5vw]">
-            <div className="w-[70%] flex-col justify-between "> 
-                <h5 className="text-left mb-[4vw]">Nossos Cortes</h5>
-                <h1 className="text-[black] text-justify mb-[4vw]">Cortes selecionados para proporcionar uma experiência de degustação incomparável, para você que aprecia o que há de melhor da carne animal suína e ovina. <br/> Esse menu 
+        <div className="flex pt-[5vw] h-full max-[425px]:flex-wrap">
+            <div className="w-[70%] max-[425px]:w-full flex-col justify-between "> 
+                <h5 className="text-left mb-[4vw] max-[425px]:text-[5vw]">Nossos Cortes</h5>
+                <h1 className="text-[black] text-justify mb-[4vw] max-[425px]:text-[2vw]">Cortes selecionados para proporcionar uma experiência de degustação incomparável, para você que aprecia o que há de melhor da carne animal suína e ovina. <br/> Esse menu 
                 oferece uma ampla gama de opções para os amantes de carne, atendendo a todos os gostos e preferências. Seja você um fã de cortes mais tradicionais ou alguém que gosta de experimentar cortes mais únicos e especializados, certamente algo que agrade seu paladar. </h1>
             </div>
-            {Image(our, "100%")}
+            <div className="max-[425px]:w-full max-[425px]:flex max-[425px]:justify-center">
+                {Image(our, "100%")}
+            </div>
         </div>
        
     )
@@ -50,13 +52,13 @@ function Selection(){
         <div>
             <div className="w-full bg-[black] px-[10vw] h-[4vw] rounded-[1vw] flex items-center mt-[5vw]">
                 <div className="w-[100%]  flex row-auto justify-between">
-                    <button onClick={()=>{setText("Nossos cortes ovinos, são provenientes de carneiros e cordeiros, com uma variedade de mais de 20 cortes, dos mais comuns, como Alcatra Completa e Filé Mignon, até cortes mais especializados, como Prime Rib e T-Bone. "),setType("01")}} className="bg-black"><h1>Cortes ovinos</h1></button>
-                    <button onClick={()=>{setText("Na seção de carnes suínas, que são provenientes de porcos, apresentamos mais de 25 cortes do mais comum ao mais especializada, sirva-se com nossa Picanha Suína, Porchetta, Short Rib, e Tomahawk. "),setType("02")}} className="bg-black"><h1>Cortes suínos</h1></button>
+                    <button onClick={()=>{setText("Nossos cortes ovinos, são provenientes de carneiros e cordeiros, com uma variedade de mais de 20 cortes, dos mais comuns, como Alcatra Completa e Filé Mignon, até cortes mais especializados, como Prime Rib e T-Bone. "),setType("01")}} className="bg-black "><h1 className="max-[425px]:text-[2vw]">Cortes ovinos</h1></button>
+                    <button onClick={()=>{setText("Na seção de carnes suínas, que são provenientes de porcos, apresentamos mais de 25 cortes do mais comum ao mais especializada, sirva-se com nossa Picanha Suína, Porchetta, Short Rib, e Tomahawk. "),setType("02")}} className="bg-black"><h1 className="max-[425px]:text-[2vw]">Cortes suínos</h1 ></button>
                 </div>
             </div>
             
             <div className="w-[70%] mt-[5%] ml-[5%]">
-                <h1 className="text-black text-left ">{text}</h1>
+                <h1 className="text-black text-left max-[425px]:text-[2vw] max-[425px]:text-justify">{text}</h1>
             </div>
 
             {Products(products)}
@@ -80,24 +82,24 @@ const responsive = {
       items: 3
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 3
+      breakpoint: { max: 425, min: 0 },
+      items: 2
     }
   };
 
 function Products(lista: Lista[]){
     return (
-        <div className="w-[100%] mt-[2vw] mb-[2vw] h-[20vw] flex items-center">
-            <Carousel removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className="w-full h-full">
+        <div className="w-[100%] mt-[2vw] pb-[2vw] h-[20vw] max-[425px]:h-[60vw] flex items-center">
+            <Carousel autoPlay={true} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className="w-full h-full">
                 {
                     lista.map((index) => (
                         <div key={index.nome} className="w-[50%]">
-                            <div className="h-[10vw] w-[20vw] overflow-hidden rounded-[1vw]">
-                            <div className={`flex h-full`}  style={{alignItems:"center"}}>
-                            <a href={`/nutricional/${index.nome}`}><img src={index.src} className="object-contain" /></a> 
+                            <div className="h-[15vw] w-[20vw] max-[425px]:h-[30vw] max-[425px]:w-[37vw]  overflow-hidden">
+                                <div className={`flex h-full`}  style={{alignItems:"center"}}>
+                                    <a href={`/nutricional/${index.nome}`} className="h-full w-full"><img src={index.src} className="object-cover h-full w-full rounded-[2vw]" /></a>
+                                </div>
                             </div>
-                            </div>
-                            <div className="w-[20vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw]"><h1>{index.nome}</h1></div>
+                            <div className="w-[20vw] max-[425px]:w-[37vw] max-[425px]:h-[4vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw] flex justify-center items-center"><h1 className="max-[425px]:text-[2vw]">{index.nome}</h1></div>
                         </div>
                     ))
                 }

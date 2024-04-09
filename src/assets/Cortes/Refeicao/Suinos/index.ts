@@ -1,9 +1,9 @@
-import carre from './Carré-da-bisteca-Suíno.jpg'
-import costela from './Costela-Suína.jpg'
-import joelho from './Joelho-Suíno.jpg'
-import paleta from './Paleta-Suína.jpg'
-import pes from './Pés-Suíno.jpg'
-import toucinho from './Toucinho-Suíno.jpg'
+import carre from './Carré-da-bisteca-Suíno.webp'
+import costela from './Costela-Suína.webp'
+import joelho from './Joelho-Suíno.webp'
+import paleta from './Paleta-Suína.webp'
+import pes from './Pés-Suíno.webp'
+import toucinho from './Toucinho-Suíno.webp'
 
 type Lista = {
     nome: string

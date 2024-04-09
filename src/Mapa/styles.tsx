@@ -65,21 +65,21 @@ export function Container (){
                 
             </Modal>
 
-            <div className="w-full" style={{alignItems:"center"}}>
+            <div className="w-full min-h-[100vh]" style={{alignItems:"center"}}>
                 <div className={`w-full h-[34vw] items-center flex px-[10vw]`} style={{backgroundImage:h01, backgroundSize: 'cover'}}>
                 </div>
-                <div className={`w-full h-[79vw] flex justify-center items-center`} style={{backgroundImage:h02, backgroundSize: 'cover'}}>
+                <div className={`w-full h-[79vw] flex justify-center items-center  max-[425px]:h-[110vw]`} style={{backgroundImage:h02, backgroundSize: 'cover'}}>
                         
                 </div>
-                <div className={`w-full h-[50vw] flex justify-start p-[10vw] items-start`} style={{backgroundImage:bg2, backgroundSize: 'cover'}}>
-                        <div className="w-[50%]">
-                            <h2 className="text-black text-left text-[3vw]">Quer montar um menu com qualidade e produtos de excelência?</h2>
-                            <h1 className="text-black text-left text-[1.5vw] mt-[2vw]">Contamos com a experiência da Chef e consultoda gastronômica Rose Mardoll. Todos os restaurantes que estamos hoje tem seu menu assinados
+                <div className={`w-full h-[50vw] max-[425px]:h-[160vw] flex justify-start p-[10vw] items-start`} style={{backgroundImage:bg2, backgroundSize: 'cover'}}>
+                        <div className="w-[50%] max-[425px]:w-full  max-[425px]:mt-[10vw]">
+                            <h2 className="text-black text-left text-[3vw] max-[425px]:text-[5vw]">Quer montar um menu com qualidade e produtos de excelência?</h2>
+                            <h1 className="text-black text-left text-[1.5vw] mt-[2vw] max-[425px]:text-[3vw]">Contamos com a experiência da Chef e consultoda gastronômica Rose Mardoll. Todos os restaurantes que estamos hoje tem seu menu assinados
                                 completamente pela Chef.
                             </h1>
-                            <div className="mt-[2vw] w-full flex justify-between">
-                                <button onClick={openModal} className="bg-black w-[18vw] h-[3vw] mr-[2%]"><h2 className="text-[0.8vw]">PRECISO DE UM ESPECIALISTA</h2></button>
-                                <button onClick={()=>{window.open(catalogo)}} className="bg-white w-[18vw] h-[3vw]"><h2 className="text-[0.8vw] text-black">CATÁLOGO DE CORTES</h2></button>
+                            <div className="mt-[2vw] w-full flex justify-between max-[425px]:mt-[10vw]">
+                                <button onClick={openModal} className="bg-black w-[18vw] h-[3vw] mr-[2%] max-[425px]:h-[12vw] max-[425px]:w-[30vw]"><h2 className="text-[0.8vw] max-[425px]:text-[2vw]" >PRECISO DE UM ESPECIALISTA</h2></button>
+                                <button onClick={()=>{window.open(catalogo)}} className="bg-white w-[18vw] h-[3vw] max-[425px]:h-[12vw] max-[425px]:w-[30vw]"><h2 className="text-[0.8vw] text-black max-[425px]:text-[2vw] ">CATÁLOGO DE CORTES</h2></button>
                             </div>
                         </div>
                 </div>
@@ -88,64 +88,3 @@ export function Container (){
     )
 } 
 
-
-function Selection(){
-    const [type, setType] = useState("01")
-    const productsOvine : Lista[]=  type == "01" ? churrascoListOvine : type == "02" ? refeicaoOvine : type == "03" ? lanche : []
-
-    return(
-        <div>
-            <div className="w-full bg-[black] px-[10vw] h-[4vw] rounded-[1vw] flex items-center mt-[5vw]">
-                <div className="w-[100%]  flex row-auto justify-between">
-                    <button onClick={()=>{setType("01")}} className="bg-black "><h1>PARA CHURRASCO</h1></button>
-                    <button onClick={()=>{setType("02")}} className="bg-black"><h1>REFEIÇÃO DO DIA A DIA</h1></button>
-                    <button onClick={()=>{setType("03")}} className="bg-black"><h1>HORA DO LANCHE</h1></button>
-                </div>
-            </div>
-            {Products(productsOvine)}
-            
-        </div>
-     
-    )
-}
-
-const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 3
-    }
-  };
-
-function Products(lista: Lista[]){
-    return (
-        <div className="w-[100%] mt-[2vw] mb-[2vw] h-[20vw] flex items-center">
-            <Carousel responsive={responsive} className="w-full h-full">
-                {
-                    lista.map((index) => (
-                        <div key={index.nome} className="w-[50%]">
-                            <div className="h-[10vw] w-[20vw] overflow-hidden rounded-[1vw]">
-                            <div className={`flex h-full`}  style={{alignItems:"center"}}>
-                            <a href={`/nutricional/${index.nome}`}><img src={index.src} className="object-contain" /></a>
-                            </div>
-                            </div>
-                            <div className="w-[20vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw]"><h1>{index.nome}</h1></div>
-                        </div>
-                    ))
-                }
-            </Carousel>
-            
-        </div>
-    )
-}

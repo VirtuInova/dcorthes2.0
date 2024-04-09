@@ -1,6 +1,6 @@
-import espSuino from './Espetinho-Suíno.jpg'
-import esp from './Espetinho-Ovino.jpg'
-import ham from './Hamburguer-Ovino.jpg'
+import espSuino from './Espetinho-Suíno.webp'
+import esp from './Espetinho-Ovino.webp'
+import ham from './Hamburguer-Ovino.webp'
 
 type Lista = {
     nome: string

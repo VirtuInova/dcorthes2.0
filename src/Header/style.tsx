@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { buttonHeader, logoHeader } from "../assets"
 import Modal from 'react-modal';
-
+import Hamburger from 'hamburger-react'
+import { slide as Menu } from 'react-burger-menu'
 
 const customStyles = {
     content: {
@@ -16,6 +17,7 @@ const customStyles = {
 
 export function Container (){
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [open, setOpen] = useState(false)
 
     function openModal() {
         setIsOpen(true);
@@ -25,8 +27,22 @@ export function Container (){
         setIsOpen(false);
     }
 
+    function handleOnOpen() {
+        setOpen(true);
+    }
+    function handleOnClose() {
+        setOpen(false);
+    }
+
     return (
         <>
+        <Menu isOpen={open} onOpen={ handleOnOpen } onClose={ handleOnClose } className="pt-[20vw] bg-white">
+            <a id="sobre" className="menu-item" href="/"><h1 className="text-black text-[4vw]">Home</h1></a>
+            <a id="sobre" className="menu-item" href="/sobre"><h1 className="text-black text-[4vw] mt-[5%]">Sobre</h1></a>
+            <a id="produtos" className="menu-item" href="/produtos"><h1 className="text-black text-[4vw] mt-[5%]">Produtos</h1></a>
+            <a id="cortes" className="menu-item" href="/cortes"><h1 className="text-black text-[4vw] mt-[5%]">Cortes</h1></a>
+            <a id="mapa" className="menu-item" href="/mapa"><h1 className="text-black text-[4vw] mt-[5%]">Mapa</h1></a>
+        </Menu>
         <Modal
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
@@ -53,7 +69,8 @@ export function Container (){
         {Image()}
         {Options()}
         <div className="w-[15vw] h-[10vw] flex justify-center ml-[4%]" style={{alignItems:"center"}}>
-            <a href="#" onClick={openModal}><img src={buttonHeader}/></a>
+            <a href="#" onClick={openModal} className="max-[425px]:hidden"><img src={buttonHeader}/></a>
+            <Hamburger toggled={open} toggle={setOpen} color="white" size={20}/>
         </div>
     </div>
         </>
@@ -62,8 +79,8 @@ export function Container (){
 
 function Image(){
     return (
-        <div className="w-[20%] h-[10vw] flex justify-center ml-[2vw]" style={{alignItems:"center"}}>
-            <a href="/"><img src={logoHeader} /></a>
+        <div className="w-[20%] h-[10vw] flex justify-center ml-[2vw] " style={{alignItems:"center"}}>
+            <a href="/" ><img src={logoHeader} className="max-[425px]:h-[5vw]"/></a>
         </div>
     
     )
@@ -71,11 +88,11 @@ function Image(){
 
 function Options(){
     return ( 
-        <div className="w-[50%] ml-[5%] flex row-auto justify-between">
-            <a href="/sobre"><h1 >Sobre</h1></a>
-            <a href="/cortes"><h1>Nossos Cortes</h1></a>
+        <div className="w-[50%] ml-[5%] flex row-auto justify-between ">
+            <a href="/sobre" className="max-[425px]:hidden"><h1 >Sobre</h1></a>
+            <a href="/cortes" className="max-[425px]:hidden"><h1>Nossos Cortes</h1></a>
             {/* <h1>Cozinha Nobre</h1> */}
-            <a href="/produtos"><h1>Produtos</h1></a>
+            <a href="/produtos" className="max-[425px]:hidden"><h1>Produtos</h1></a>
             {/* <h1>Parcerias</h1> */}
         </div>
     )

@@ -1,7 +1,7 @@
-import costela from './Costela-Especial-Ovino.jpg'
-import guisado from './Guisado-Pescoço-Ovino..jpg'
-import paleta from './Paleta-Ovino.jpg'
-import sarapatel from './Sarapatel-Ovino.jpg'
+import costela from './Costela-Especial-Ovino.webp'
+import guisado from './Guisado-Pescoço-Ovino..webp'
+import paleta from './Paleta-Ovino.webp'
+import sarapatel from './Sarapatel-Ovino.webp'
 
 type Lista = {
     nome: string
