@@ -66,17 +66,46 @@ export function Container (){
                 <div className="flex w-[90%] justify-center mt-[2vw]">
                     <h2 className="text-black text-[2vw]">Entre em contato com a D'Corthes</h2>
                 </div>
-                <div className="flex justify-center my-[5vw]">
-                    <div id="info" className="flex-wrap w-[50%]">
-                            <input placeholder="Nome" className="w-[50%] text-[1vw] px-[2vw] mr-[2vw] mb-[2vw] h-[3vw]  rounded-[0.5vw] bg-slate-300"></input>
-                            <input placeholder="Celular" className="w-[26%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                            <input placeholder="CPF" className="w-[20%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                            <input placeholder="Cidade" className="w-[20%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                            <input placeholder="Tipo de negócio" className="w-[30%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                            <input placeholder="E-mail" className="w-[44%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                            <button className="w-[30%] bg-black h-[3vw]"><h1 className="text-[1vw]">Cadastrar</h1></button>
-                    </div>
-                </div>
+                <Formik
+                            initialValues={{"Nome": "",
+                            "Idade": "",
+                            "Celular": "",
+                            "CPF": "",
+                            "Estado": "",
+                            "E-mail": "",
+                        }}
+                            onSubmit={async function send (values){
+                                 setSending(true)
+                                 const params = {
+                                    message: `Nome: ${values.Nome}, 
+                                    Telefone: ${values.Celular}, 
+                                    Email: ${values["E-mail"]} , 
+                                    CPF: ${values.CPF}, 
+                                    Idade: ${values.Idade}, 
+                                    Estado: ${values.Estado}`
+                                }
+                                    emailjs.send('service_xkzbnlg', 'template_v6s9ybk', params, '50tNXyTFF0JinzHnv').then(()=>{setSending(false)}).catch(()=>{setSending(false)})
+
+                                }
+                            
+                               
+                            }
+                        >{({handleChange, handleSubmit, handleReset}) =>
+                        
+                        <div className="flex justify-center my-[5vw]">
+                            <div id="info" className="flex-wrap w-[50%]">
+                            <input required onChange={handleChange("Nome")} placeholder="Nome"  className="w-[50%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] mr-[2vw] mb-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300"></input>
+                        <input required type="number" onChange={handleChange("Idade")} placeholder="Idade" className="w-[20%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="number" onChange={handleChange("Celular")} placeholder="Celular" className="w-[26%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="number" onChange={handleChange("CPF")} placeholder="CPF" className="w-[20%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required onChange={handleChange("Estado")} placeholder="Estado" className="w-[20%] placeholder-black text-black  text-[1vw] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="email" onChange={handleChange("E-mail")} placeholder="E-mail" className="w-[44%] placeholder-black text-black  max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <button style={{display:`${sending ? "" : "none"}`}} className="w-[30%] bg-blue h-[3vw] placeholder-black text-black max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Aguarde...</h1></button>
+                        <button style={{display:`${sending ? "none" : ""}`}} onClick={()=>{handleSubmit()}} className="w-[30%] bg-black h-[3vw] max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Cadastrar</h1></button>
+                                    <button className="w-[30%] bg-black h-[3vw]"><h1 className="text-[1vw]">Cadastrar</h1></button>
+                            </div>
+                        </div>
+                        }</Formik>
                 
             </Modal>
 
