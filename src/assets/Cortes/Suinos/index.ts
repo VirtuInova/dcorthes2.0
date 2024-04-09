@@ -24,37 +24,154 @@ import espSuino from './Espetinho-Suíno.webp'
 import carreB from './Carré-da-bisteca-Suíno.webp'
 import pernil from './Pernil-com-osso-Suíno.webp'
 import picanha from './Picanha-Suíno.webp'
+
+type NutritionalInfo = {
+    porcentagem: string;
+    tipo: string;
+    valor: number;
+};
+
 type Lista = {
-    nome: string
-    src: string
-}
+    nome: string;
+    src: string;
+    nutri: NutritionalInfo[];
+};
+
 const lista: Lista[] = [
-    {nome: "Carré da Bisteca" , src: carreB},
-    {nome: "Pernil com Osso" , src: pernil},
-    {nome: "Picanha" , src: picanha},
-    {nome: "Alcatra Suína" , src: alcatra},
-    {nome: "Bife Ancho", src:bife}, 
-    {nome:"Coxão Duro", src:coxao},
-    {nome:"Coxão Mole", src:coxaoMole},
-    {nome:"Filé Mignon", src:file},
-    {nome:"Maminha", src:maminha},
-    {nome:"Ossobuco", src:ossobuco},
-    {nome:"Panceta", src:pancheta},
-    {nome:"Patinho", src:patinho},
-    {nome:"Porqueta", src:porqueta},
-    {nome:"Prime Rib", src:primeRib},
-    {nome:"Short-Rib", src:shortRib},
-    {nome:"Suan", src:suan},
-    {nome:"T-Bone", src:tbone},
-    {nome:"Tomahawk", src:tomahawk},
-    {nome:"Lagarto", src:lagarto},
-    {nome:"Carré Francês", src:carre},
-    {nome: "Espetinho Suíno" , src: espSuino},
-    {nome: "Carré-da-bisteca" , src: carre},
-    {nome: "Costela", src:costela}, 
-    {nome: "Paleta", src:paleta}, 
-    {nome:"Joelho", src:joelho},
-    {nome:"Pés", src:pes},
-    {nome:"Toucinho", src:toucinho}
+    {nome: "Carré da Bisteca" , src: carreB, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Pernil com Osso" , src: pernil, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Picanha" , src: picanha, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Alcatra Suína" , src: alcatra, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Bife Ancho", src:bife, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]}, 
+    {nome:"Coxão Duro", src:coxao, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Coxão Mole", src:coxaoMole, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Filé Mignon", src:file, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Maminha", src:maminha, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Ossobuco", src:ossobuco, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Panceta", src:pancheta, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Patinho", src:patinho, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Porqueta", src:porqueta, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Prime Rib", src:primeRib, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Short-Rib", src:shortRib, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Suan", src:suan, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"T-Bone", src:tbone, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Tomahawk", src:tomahawk, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Lagarto", src:lagarto, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Carré Francês", src:carre, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Espetinho Suíno" , src: espSuino, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Carré-da-bisteca" , src: carre, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome: "Costela", src:costela, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]}, 
+    {nome: "Paleta", src:paleta, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]}, 
+    {nome:"Joelho", src:joelho, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Pés", src:pes, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]},
+    {nome:"Toucinho", src:toucinho, nutri: [{
+        porcentagem: "11%",
+        tipo:"Valor Energético(g)",
+        valor: 213
+    },]}
 ]
 export default lista

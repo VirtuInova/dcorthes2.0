@@ -287,23 +287,28 @@ export function Container (){
                 </div>
             
                 <div className="w-full mt-[10vw] pl-[10vw]">
-                    <div>
-                        <h1 className='text-left text-black max-[425px]:text-[3vw]'>INFORMAÇÃO NUTRICIONAL</h1>
-                        <h1 className='text-left text-black mt-[1vw] max-[425px]:text-[3vw]'>Porção de 100g. Quantidade por porção %VD(*)</h1>
-                    </div>
+                {corte?.nutri[3] &&
+                    <>
+                        <div>
+                            <h1 className='text-left text-black max-[425px]:text-[3vw]'>INFORMAÇÃO NUTRICIONAL</h1>
+                            <h1 className='text-left text-black mt-[1vw] max-[425px]:text-[3vw]'>Porção de 100g. Quantidade por porção %VD(*)</h1>
+                        </div>
                     
-
-                    <div className="flex flex-wrap w-full pr-[15vw] mt-[2vw] ">
-                        {informacoes.map((index) => (
-                            <div key={index.tipo} className="rounded-[1vw] p-[1vw] w-[20vw] h-[7vw] mr-[2vw] mb-[2vw] max-[425px]:h-[12vw] max-[425px]:w-[30vw]" style={{ border: "1px solid black" }}>
-                                <h1 className="text-left text-black max-[425px]:text-[2vw]">{index.porcentagem}</h1>
-                                <h1 className="text-left text-black mb-[0.3vw] max-[425px]:text-[2vw]">{index.tipo}</h1>
-                                <hr style={{ border: "1px solid black" }} />
-                                <h1 className="text-left text-black mt-[0.3vw] max-[425px]:text-[2vw]">{index.valor}</h1>
-                            </div>
-                        ))}
-                    </div>
-                    <h2 className='text-black text-[1.5vw] mt-[3vw] mb-[2vw] max-[425px]:text-[3vw] max-[425px]:text-left'>Igredientes: <br/> NÃO CONTÉM GLUTÉN</h2>
+                    
+                    
+                        <div className="flex flex-wrap w-full pr-[15vw] mt-[2vw] ">
+                           { corte?.nutri.map((index) => (
+                                <div key={index.tipo} className="rounded-[1vw] p-[1vw] w-[20vw] h-[7vw] mr-[2vw] mb-[2vw] max-[425px]:h-[12vw] max-[425px]:w-[30vw]" style={{ border: "1px solid black" }}>
+                                    <h1 className="text-left text-black max-[425px]:text-[2vw]">{index.porcentagem}</h1>
+                                    <h1 className="text-left text-black mb-[0.3vw] max-[425px]:text-[2vw]">{index.tipo}</h1>
+                                    <hr style={{ border: "1px solid black" }} />
+                                    <h1 className="text-left text-black mt-[0.3vw] max-[425px]:text-[2vw]">{index.valor}</h1>
+                                </div>
+                            ))}
+                        </div>
+                        <h2 className='text-black text-[1.5vw] mt-[3vw] mb-[2vw] max-[425px]:text-[3vw] max-[425px]:text-left'>Igredientes: <br/> NÃO CONTÉM GLUTÉN</h2>
+                    </>
+                    }
                 </div>
 
                 

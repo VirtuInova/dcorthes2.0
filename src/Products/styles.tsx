@@ -18,7 +18,6 @@ export function Container (){
     <div className="w-full min-h-[100vh] bg-[white] px-[10vw]" style={{alignItems:"center"}}>
         {Content()}
         {Selection()}
-        
     </div>)
 } 
 
