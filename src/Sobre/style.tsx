@@ -119,7 +119,7 @@ export function Container (){
                     </div>
                 </div>
 
-                <div className="bg-black h-[50vw] max-[425px]:h-[120vw]">
+                <div id="missao" className="bg-black h-[50vw] max-[425px]:h-[120vw]">
                     <h5 className="text-white pt-[3%] max-[425px]:text-[4vw]">Aqui todos os MOMENTOS são nobres!</h5>
                     <div className="flex items-end max-[425px]:items-center h-full max-[425px]:h-[90%] justify-between max-[425px]:mt-[2%] px-[10vw] max-[425px]:flex-wrap">
                         <div className="w-[30%] max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[30vw]  rounded-[1vw]">
@@ -145,7 +145,7 @@ export function Container (){
                     </div>
                 </div>
 
-                <div className="bg-white mb-[10%] h-[50vw] flex-wrap justify-between px-[10vw] mt-[5vw]">
+                <div id="faq" className="bg-white mb-[10%] h-[50vw] flex-wrap justify-between px-[10vw] mt-[5vw]">
                     <img src={faq} className="h-[30%]"></img>
                     <div className="h-[40vw] mt-[2%] overflow-y-scroll">
                         <Faq

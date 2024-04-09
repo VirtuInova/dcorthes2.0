@@ -4,8 +4,8 @@ type informations = {
     nome: string
     url: string
 }
-const list01: informations[] = [{nome:"Quem somos", url:""}, {nome:"Nossa história", url:""}, {nome:"Missão, Visão e valores", url:""}, {nome:"FAQ", url:""} ]
-const list02: informations[] = [{nome:"Suínos", url:""}, {nome:"Ovinos", url:""}, {nome:"Pescados", url:""}, {nome:"Todos os produtos", url:""} ]
+const list01: informations[] = [{nome:"Quem somos", url:"/sobre"}, {nome:"Missão, Visão e valores", url:"/sobre/#missao"}, {nome:"FAQ", url:"/sobre/#faq"} ]
+const list02: informations[] = [{nome:"Suínos", url:"/produtos"}, {nome:"Ovinos", url:"/produtos"} ]
 const list03: informations[] = [{nome:"Receitas", url:""}, {nome:"Temporadas", url:""}]
 const list04: informations[] = [{nome:"Nossos contatos", url:""}, {nome:"Experiências dos clientes", url:""}, {nome:"Nossos parceiros", url:""}, {nome:"Seja um revendedor", url:""} , {nome:"Trabalhe conosco", url:""}, {nome:"Política de cookies", url:""}, {nome:"Política de cookies", url:""}, {nome:"Política de privacidade", url:""}, {nome:"Política de inspeção de produtos de origem animal", url:""}, {nome:"Imprensa", url:""}]
 
@@ -17,8 +17,6 @@ export function Container (){
             {RedesSociais()}
             {Options("SOBRE NÓS", list01)}
             {Options("NOSSOS CORTES", list02)}
-            {Options("COZINHA NOBRE", list03)}
-            {Options("INFORMAÇÕES ÚTEIS", list04)}
         </div>
     </div>)
 } 
@@ -35,9 +33,9 @@ function Image(src: string, width: string){
 function Options(title: string, list: informations[]){
     return ( 
         <div className="w-[35%] ml-[2%] flex-col justify-start" style={{alignItems:"start"}}>
-            <h2 className="text-left">{title}</h2>
+            <h2 className="text-left max-[425px]:text-[2.1vw]">{title}</h2>
             {list.map((index)=>(
-                <h3 className="text-left mt-[5%]">{index.nome}</h3>
+                <a href={index.url}><h3 className="text-left mt-[5%] max-[425px]:text-[2.1vw]">{index.nome}</h3></a>
             ))}
             
         </div>
@@ -47,13 +45,13 @@ function Options(title: string, list: informations[]){
 
 function RedesSociais(){
     return (
-        <div className="w-[50%] h-[20vw] flex-col justify-center mr-[5%]" style={{alignItems:"center"}}>
+        <div className="w-[50%] h-[20vw] max-[425px]:w-[30%] flex-col justify-center mr-[5%]" style={{alignItems:"center"}}>
             <div className="w-[100%] flex-col justify-center mb-[5%]">
                 {Image(logoFoot, "80%")}
-                <h1 className="mt-[25%] ml-[5%]">Acompanhe nossas redes sociais</h1>
+                <h1 className="mt-[25%] ml-[5%] max-[425px]:text-[2vw] max-[425px]:mt-[10%]">Acompanhe nossas redes sociais</h1>
             </div>
            
-            <div className="flex justify-center w-[100%]">
+            <div className="flex justify-center w-[100%] max-[425px]:mt-[10%]">
                 {Image(insta, "70%")}
                 {Image(spotify, "70%")}
                 {Image(yt, "70%")}

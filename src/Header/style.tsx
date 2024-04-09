@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { buttonHeader, logoHeader } from "../assets"
 import Modal from 'react-modal';
-import Hamburger from 'hamburger-react'
+import { Pivot as Hamburger } from 'hamburger-react'
 import { slide as Menu } from 'react-burger-menu'
 
 const customStyles = {
@@ -36,7 +36,7 @@ export function Container (){
 
     return (
         <>
-        <Menu isOpen={open} onOpen={ handleOnOpen } onClose={ handleOnClose } className="pt-[20vw] bg-white">
+        <Menu  disableAutoFocus styles={{bmBurgerButton:{display:"none"}, bmBurgerBars:{display:"none"}}}  width={ 250 } isOpen={open} onOpen={ handleOnOpen } onClose={ handleOnClose } className="pt-[20vw] bg-white">
             <a id="sobre" className="menu-item" href="/"><h1 className="text-black text-[4vw]">Home</h1></a>
             <a id="sobre" className="menu-item" href="/sobre"><h1 className="text-black text-[4vw] mt-[5%]">Sobre</h1></a>
             <a id="produtos" className="menu-item" href="/produtos"><h1 className="text-black text-[4vw] mt-[5%]">Produtos</h1></a>
@@ -65,12 +65,13 @@ export function Container (){
                 </div>
                 
         </Modal>
-        <div className="w-full h-[10vw] bg-[black] flex" style={{alignItems:"center"}}>
+        <div className="w-full h-[10vw] bg-[black] flex max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
         {Image()}
         {Options()}
         <div className="w-[15vw] h-[10vw] flex justify-center ml-[4%]" style={{alignItems:"center"}}>
             <a href="#" onClick={openModal} className="max-[425px]:hidden"><img src={buttonHeader}/></a>
-            <Hamburger toggled={open} toggle={setOpen} color="white" size={20}/>
+            <div className="min-[426px]:hidden "><Hamburger onToggle={handleOnOpen} toggled={open} color="white" size={20} hideOutline={true}/></div>
+        
         </div>
     </div>
         </>
@@ -79,8 +80,8 @@ export function Container (){
 
 function Image(){
     return (
-        <div className="w-[20%] h-[10vw] flex justify-center ml-[2vw] " style={{alignItems:"center"}}>
-            <a href="/" ><img src={logoHeader} className="max-[425px]:h-[5vw]"/></a>
+        <div className="w-[20%] h-[10vw] flex justify-center ml-[2vw] max-[425px]:ml-[4vw] max-[425px]:h-[15vw]" style={{alignItems:"center"}}>
+            <a href="/" ><img src={logoHeader} className="max-[425px]:h-[15vw]"/></a>
         </div>
     
     )

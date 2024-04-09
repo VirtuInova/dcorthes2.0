@@ -36,7 +36,10 @@ function Content (){
                 <h1 className="text-[black] text-justify mb-[4vw] max-[425px]:text-[2vw]">Cortes selecionados para proporcionar uma experiência de degustação incomparável, para você que aprecia o que há de melhor da carne animal suína e ovina. <br/> Esse menu 
                 oferece uma ampla gama de opções para os amantes de carne, atendendo a todos os gostos e preferências. Seja você um fã de cortes mais tradicionais ou alguém que gosta de experimentar cortes mais únicos e especializados, certamente algo que agrade seu paladar. </h1>
             </div>
-            <div className="max-[425px]:w-full max-[425px]:flex max-[425px]:justify-center">
+            <div className={`flex justify-center ml-[2vw] w-[90vw] max-[425px]:w-[40vw] max-[425px]:hidden`}  style={{alignItems:"center"}}>
+                <img src={our} width={"100%"} />
+            </div>
+            <div className="max-[425px]:w-full max-[425px]:flex max-[425px]:justify-center hidden">
                 {Image(our, "100%")}
             </div>
         </div>
