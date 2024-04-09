@@ -70,7 +70,7 @@ export function Container (){
         {Options()}
         <div className="w-[15vw] h-[10vw] flex justify-center ml-[4%]" style={{alignItems:"center"}}>
             <a href="#" onClick={openModal} className="max-[425px]:hidden"><img src={buttonHeader}/></a>
-            <div className="min-[426px]:hidden "><Hamburger onToggle={handleOnOpen} toggled={open} color="white" size={20} hideOutline={true}/></div>
+            <div className="min-[426px]:hidden "><Hamburger onToggle={handleOnOpen} toggled={open} color="white" size={30} hideOutline={true}/></div>
         
         </div>
     </div>
@@ -80,8 +80,8 @@ export function Container (){
 
 function Image(){
     return (
-        <div className="w-[20%] h-[10vw] flex justify-center ml-[2vw] max-[425px]:ml-[4vw] max-[425px]:h-[15vw]" style={{alignItems:"center"}}>
-            <a href="/" ><img src={logoHeader} className="max-[425px]:h-[15vw]"/></a>
+        <div className="w-[20%] max-[425px]:w-[30%] h-[10vw] flex justify-center ml-[2vw] max-[425px]:ml-[4vw] max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
+            <a href="/" ><img src={logoHeader} className="max-[425px]:h-[20vw]"/></a>
         </div>
     
     )

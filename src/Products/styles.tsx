@@ -35,18 +35,18 @@ function Content (){
     return (
         <div className="flex pt-[5vw] ">
             <div className="w-[70%] flex-col justify-between max-[425px]:w-full"> 
-                <h5 className="text-left mb-[4vw] max-[425px]:text-[5vw]">Nossos Produtos</h5>
+                <h5 className="text-left mb-[4vw] max-[425px]:text-[8vw]">Nossos Produtos</h5>
                 <h1 className="text-[black] text-left mb-[4vw] max-[425px]:text-[3vw]"> Todos os nossos produtos são embaladas a vácuo e ultracongeladas para você levar para casa. Nossos cortes 
                 são ideais para o seu churrasco, refeição do dia a dia e 
                 lanche.</h1>
                 <div className="flex w-full items-center justify-start">
                     <div>
                         {Image(suine, "80%")}
-                        <h1 className="text-[black] mt-[1vw] ml-[1.5vw] max-[425px]:text-[2vw]">Cortes suínos</h1>
+                        <h1 className="text-[black] mt-[1vw] ml-[1.5vw] max-[425px]:text-[3vw]">Cortes suínos</h1>
                     </div>
                     <div>
                         {Image(ovine, "80%")}
-                        <h1 className="text-[black] mt-[1vw] ml-[1.5vw] max-[425px]:text-[2vw]">Cortes ovinos</h1>
+                        <h1 className="text-[black] mt-[1vw] ml-[1.5vw] max-[425px]:text-[3vw]">Cortes ovinos</h1>
                     </div>
                 </div>
             </div>
@@ -68,14 +68,14 @@ function Selection(){
         <div>
             <div className="w-full bg-[black] px-[10vw] max-[425px]:p-[0vw] h-[4vw] rounded-[1vw] flex items-center mt-[5vw]">
                 <div className="w-[100%]  flex row-auto justify-between">
-                    <button onClick={()=>{setText("Quando pensamos em um churrasco perfeito, a escolha dos cortes de carne é crucial. Existem certos cortes que são ideais para o seu churrasco, que irão garantir um sabor inigualável e uma experiência gastronômica memorável para você e seus convidados."), setType("01")}} className="bg-black "><h1 className="max-[425px]:text-[1.4vw]">PARA CHURRASCO</h1></button>
-                    <button onClick={()=>{setText("A refeição do dia a dia é algo que muitas vezes não damos a devida atenção, mas ela desempenha um papel crucial em nossas vidas. Ela nos proporciona a energia necessária para enfrentar o dia, além de ser um momento de pausa e relaxamento em nossa rotina agitada. Portanto, é importante ter uma dieta balanceada e nutritiva para manter a saúde e o bem-estar.."), setType("02")}} className="bg-black"><h1 className="max-[425px]:text-[1.4vw]">REFEIÇÃO DO DIA A DIA</h1></button>
-                    <button onClick={()=>{setText("A hora do lanche também é hora de qualidade e sabor de verdade. Oferecemos para você espetinhos e carne de hamburguer prontas para o preparo."), setType("03")}} className="bg-black"><h1 className="max-[425px]:text-[1.4vw]">HORA DO LANCHE</h1></button>
+                    <button onClick={()=>{setText("Quando pensamos em um churrasco perfeito, a escolha dos cortes de carne é crucial. Existem certos cortes que são ideais para o seu churrasco, que irão garantir um sabor inigualável e uma experiência gastronômica memorável para você e seus convidados."), setType("01")}} className="bg-black "><h1 className="max-[425px]:text-[3vw]">CHURRASCO</h1></button>
+                    <button onClick={()=>{setText("A refeição do dia a dia é algo que muitas vezes não damos a devida atenção, mas ela desempenha um papel crucial em nossas vidas. Ela nos proporciona a energia necessária para enfrentar o dia, além de ser um momento de pausa e relaxamento em nossa rotina agitada. Portanto, é importante ter uma dieta balanceada e nutritiva para manter a saúde e o bem-estar.."), setType("02")}} className="bg-black"><h1 className="max-[425px]:text-[3vw]">REFEIÇÃO</h1></button>
+                    <button onClick={()=>{setText("A hora do lanche também é hora de qualidade e sabor de verdade. Oferecemos para você espetinhos e carne de hamburguer prontas para o preparo."), setType("03")}} className="bg-black"><h1 className="max-[425px]:text-[3vw]">LANCHE</h1></button>
                 </div>
             </div>
             
-            <div className="w-[70%] mt-[5%] ml-[5%] max-[425px]:w-full">
-                <h1 className="text-black text-left max-[425px]:text-[2vw]">{text}</h1>
+            <div className="w-[70%] mt-[5%] ml-[5%] max-[425px]:w-[90%]">
+                <h1 className="text-black text-left max-[425px]:text-[3vw]">{text}</h1>
             </div>
 
             {type == "03" ? null : <h2 className="text-black text-left text-[2vw] mt-[5%] max-[425px]:text-[4vw]">OVINOS</h2>}
@@ -118,7 +118,7 @@ const responsive = {
                                     <a href={`/nutricional/${index.nome}`} className="h-full w-full"><img src={index.src} className="object-cover h-full w-full rounded-[2vw]" /></a>
                                 </div>
                             </div>
-                            <div className="w-[20vw] max-[425px]:w-[37vw] max-[425px]:h-[4vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw] flex justify-center items-center"><h1 className="max-[425px]:text-[2vw]">{index.nome}</h1></div>
+                            <div className="w-[20vw] max-[425px]:w-[37vw] max-[425px]:h-[6vw] rounded-[2vw] mt-[1vw] bg-black p-[0.4vw] flex justify-center items-center"><h1 className="max-[425px]:text-[3vw]">{index.nome}</h1></div>
                         </div>
                     ))
                 }

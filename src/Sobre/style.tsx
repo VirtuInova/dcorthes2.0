@@ -57,9 +57,9 @@ const data = {
 const styles = {
     titleTextColor: "black",
     rowTitleColor: "black",
-    titleTextSize: "2vw",
-    rowContentTextSize:"2vw",
-    rowTitleTextSize: "2vw"
+    titleTextSize: "3vw",
+    rowContentTextSize:"3vw",
+    rowTitleTextSize: "3vw"
 };
 
 
@@ -119,16 +119,16 @@ export function Container (){
                     </div>
                 </div>
 
-                <div id="missao" className="bg-black h-[50vw] max-[425px]:h-[120vw]">
-                    <h5 className="text-white pt-[3%] max-[425px]:text-[4vw]">Aqui todos os MOMENTOS são nobres!</h5>
+                <div id="missao" className="bg-black h-[50vw] max-[425px]:h-[130vw]">
+                    <h5 className="text-white pt-[3%] max-[425px]:text-[5vw]">Aqui todos os MOMENTOS são nobres!</h5>
                     <div className="flex items-end max-[425px]:items-center h-full max-[425px]:h-[90%] justify-between max-[425px]:mt-[2%] px-[10vw] max-[425px]:flex-wrap">
-                        <div className="w-[30%] max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[30vw]  rounded-[1vw]">
+                        <div className="w-[30%] max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[30vw] max-[425px]:h-[35vw] rounded-[1vw]">
                             <h2 className="text-black text-[2w] text-left max-[425px]:text-[4vw]" >Missão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[2.3vw]">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[3vw]">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
                         </div>
-                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[1%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[1%] px-[2vw] pt-[1vw] max-[425px]:h-[35vw] border-white bg-white h-[30vw] rounded-[1vw]">
                             <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Visão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[2.3vw]">Sonhamos grande! Queremos ser o nome 
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[3vw] ">Sonhamos grande! Queremos ser o nome 
                             que vem à mente e ao coração quando se 
                             pensa em alimentos de origem animal. 
                             Almejamos ser uma referência, não só 
@@ -137,9 +137,9 @@ export function Container (){
                             relacionamos com clientes, colaborado
                             res e fornecedores. </h1>
                         </div>
-                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[2%] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[2%] max-[425px]:h-[25vw] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
                             <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Valores</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-left max-[425px]:text-[2.3vw]" >Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
+                            <h1 className="text-black mt-[2vw] text-[1vw] text-left max-[425px]:text-[3vw]" >Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
                         </div>
                     
                     </div>

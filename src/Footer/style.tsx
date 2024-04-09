@@ -33,9 +33,9 @@ function Image(src: string, width: string){
 function Options(title: string, list: informations[]){
     return ( 
         <div className="w-[35%] ml-[2%] flex-col justify-start" style={{alignItems:"start"}}>
-            <h2 className="text-left max-[425px]:text-[2.1vw]">{title}</h2>
+            <h2 className="text-left max-[425px]:text-[3vw]">{title}</h2>
             {list.map((index)=>(
-                <a href={index.url}><h3 className="text-left mt-[5%] max-[425px]:text-[2.1vw]">{index.nome}</h3></a>
+                <a href={index.url}><h3 className="text-left mt-[5%] max-[425px]:text-[3vw]">{index.nome}</h3></a>
             ))}
             
         </div>
