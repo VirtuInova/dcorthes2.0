@@ -6,6 +6,10 @@ import lanche from '../assets/Cortes/Lanche'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Modal from 'react-modal';
+import {Formik} from "formik";
+import ClipLoader from "react-spinners/ClipLoader";
+import emailjs from '@emailjs/browser';
+
 
 type Lista = {
     nome: string
@@ -24,6 +28,12 @@ const customStyles = {
   };
 
 
+  const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+
 export function Container (){
     const bg1 = `url(${bg01})`; 
     const bg2 = `url(${bg02})`;
@@ -31,6 +41,7 @@ export function Container (){
     const h02 = `url(${hero2})`;
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [sending, setSending] = React.useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -40,6 +51,9 @@ export function Container (){
     setIsOpen(false);
   }
 
+  
+
+ 
     
     return (
         <>
@@ -157,15 +171,49 @@ export function Container (){
                         </div>
                         
                     </div>
+                    <Formik
+                            initialValues={{"Nome": "",
+                            "Idade": "",
+                            "Celular": "",
+                            "CPF": "",
+                            "Estado": "",
+                            "E-mail": "",
+                        }}
+                            onSubmit={async function send (values){
+                                 setSending(true)
+                                 const params = {
+                                    message: `Nome: ${values.Nome}, 
+                                    Telefone: ${values.Celular}, 
+                                    Email: ${values["E-mail"]} , 
+                                    CPF: ${values.CPF}, 
+                                    Idade: ${values.Idade}, 
+                                    Estado: ${values.Estado}`
+                                }
+                                    emailjs.send('service_xkzbnlg', 'template_v6s9ybk', params, '50tNXyTFF0JinzHnv').then(()=>{setSending(false)}).catch(()=>{setSending(false)})
+
+                                }
+                            
+                               
+                            }
+                        >{({handleChange, handleSubmit, handleReset}) =>
+                            
                     <div id="info" className="flex-wrap w-[70%] max-[425px]:w-full">
-                        <input placeholder="Nome" className="w-[50%] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] mr-[2vw] mb-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300"></input>
-                        <input placeholder="Idade" className="w-[20%] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                        <input placeholder="Celular" className="w-[26%] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                        <input placeholder="CPF" className="w-[20%] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                        <input placeholder="Estado" className="w-[20%]  text-[1vw] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                        <input placeholder="E-mail" className="w-[44%]  max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
-                        <button className="w-[30%] bg-black h-[3vw] max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Cadastrar</h1></button>
-                    </div>
+                        <ClipLoader
+                            color={"#0000"}
+                            loading={sending}
+                            size={150}
+                            style={{borderColor:"#0000"}}
+                            cssOverride={override}
+                        />
+                        <input required onChange={handleChange("Nome")} placeholder="Nome"  className="w-[50%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] mr-[2vw] mb-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300"></input>
+                        <input required type="number" onChange={handleChange("Idade")} placeholder="Idade" className="w-[20%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="number" onChange={handleChange("Celular")} placeholder="Celular" className="w-[26%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="number" onChange={handleChange("CPF")} placeholder="CPF" className="w-[20%] placeholder-black text-black max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required onChange={handleChange("Estado")} placeholder="Estado" className="w-[20%] placeholder-black text-black  text-[1vw] max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <input required type="email" onChange={handleChange("E-mail")} placeholder="E-mail" className="w-[44%] placeholder-black text-black  max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
+                        <button style={{display:`${sending ? "" : "none"}`}} className="w-[30%] bg-blue h-[3vw] placeholder-black text-black max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Aguarde...</h1></button>
+                        <button style={{display:`${sending ? "none" : ""}`}} onClick={()=>{handleSubmit()}} className="w-[30%] bg-black h-[3vw] max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Cadastrar</h1></button>
+                    </div>}</Formik>
                 </div>
             </div>
         </>
