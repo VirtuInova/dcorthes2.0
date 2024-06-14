@@ -133,7 +133,7 @@ export function Container (){
 
                 <div className={`flex max-[425px]:flex-wrap  px-[10vw]  justify-between w-full h-[40vw] max-[425px]:h-[150vw]  max-[425px]:bg-none items-center bg-[url(./assets/bg-imag01.webp)]`} style={{backgroundSize: 'cover'}}>
                     <iframe className="rounded-[1vw] w-[50%] h-[80%] max-[425px]:h-[50%] max-[425px]:mt-[20%] max-[425px]:w-full"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    src="https://www.youtube.com/embed/KTgOGKHX6bA?si=aWD4n7i-_OJUDWa9&amp;controls=0">
                     </iframe>
                     <div className="w-[40%] max-[425px]:h-[50%] max-[425px]:mt-[3vw] max-[425px]:w-full">
                         <h2 className="text-black text-left text-[2vw] mb-[7%] max-[425px]:text-[4vw]">PORQUE AS PESSOAS ESCOLHEM A D'CORTHES</h2>
@@ -194,7 +194,7 @@ export function Container (){
                             <h1 className="max-[425px]:text-[3vw]">QUERO SABER MAIS</h1>
                         </div>
                         <div className="h-[2vw] flex justify-center items-center mt-[7vw]">
-                            <h2 className="text-black text-[3vw] text-left">FIQUE POR DENTRO DAS
+                            <h2 className="text-black text-[2vw] text-left">FIQUE POR DENTRO DAS
                             NOVIDADES, RECEITAS E
                             PROMOÇÕES</h2>
                         </div>

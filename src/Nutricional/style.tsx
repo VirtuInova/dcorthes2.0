@@ -56,7 +56,7 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Carré Short Ovino",
-    descricao: "Carré Short Ovino é um corte suculento e saboroso, ideal para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para refeições rápidas e fáceis."
+    descricao: "Semelhante ao Carré Francês, porém com ossos mais curtos, o Carré Short é tenro e saboroso, com uma textura que derrete na boca. Excelente para grelhar ou assar, sua gordura marmorizada infunde sabor e suculência, ideal para pratos que buscam uma experiência gustativa rica e memorável. Localizada na região dorsal é um corte feito perpendicularmente a coluna vertebral do cordeiro."
 },
 { 
     nome: "Coxão Mole Ovino",

@@ -21,10 +21,10 @@ export function Container (){
     </div>)
 } 
 
-function Image(src: string, width: string){
+function Image(src: string, width: string, link?: string){
     return (
         <div className={`flex justify-center ml-[2vw]`}  style={{alignItems:"center"}}>
-            <img src={src} width={width}/>
+            <a href={link}><img src={src} width={width}/></a>
         </div>
     
     )
@@ -53,8 +53,8 @@ function RedesSociais(){
            
             <div className="flex justify-center w-[100%] max-[425px]:mt-[10%]">
                 {Image(insta, "70%")}
-                {Image(spotify, "70%")}
-                {Image(yt, "70%")}
+                {Image(spotify, "70%", "https://open.spotify.com/user/31rf43hpg4er3e53xarc7a6oi4aa?si=28464bf0ec414c87")}
+                {Image(yt, "70%", "https://www.youtube.com/@DCorTHEs" )}
             </div>
             
         </div>
