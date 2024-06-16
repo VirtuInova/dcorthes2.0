@@ -20,15 +20,15 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Paleta Ovino",
-    descricao: "Paleta Ovina é um corte suculento e cheio de sabor, ideal para assados lentos e preparações de panela. Sua carne macia e suculenta é perfeita para absorver os sabores dos temperos, resultando em pratos deliciosos e reconfortantes."
+    descricao: "A Paleta ovina é um corte com uma boa mistura de carne e gordura, que confere umidade e sabor durante o cozimento. Ideal para assados, cozidos e churrascos, a paleta se destaca por sua carne macia e saborosa, que se desfaz facilmente, sendo uma escolha excelente para refeições que buscam um equilíbrio entre sabor e textura."
 },
 { 
     nome: "Paleta Desossada Ovino",
-    descricao: "Paleta Desossada Ovina é um corte prático e versátil, perfeito para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para refeições rápidas e fáceis."
+    descricao: "Com a remoção dos ossos, a Paleta Desossada ovina torna-se extremamente versátil, facilitando o corte e o preparo. Ideal para rolos recheados, assados ou cozidos lentos, essa versão da paleta oferece uma textura macia e um sabor profundo, enriquecido pelos temperos que permeiam facilmente a carne durante o cozimento."
 },
 { 
     nome: "Sarapatel Ovino",
-    descricao: "Sarapatel Ovino é um prato tradicionalmente preparado com miúdos de cordeiro e temperos aromáticos. Com sua textura macia e sabor rico, este prato é uma iguaria apreciada em muitas culturas."
+    descricao: "O Sarapatel ovino é um prato tradicional que utiliza miúdos e partes internas do animal, como fígado, coração e pulmões, entre outros. Conhecido por seu sabor característico, é rico em nutrientes e oferece uma experiência culinária única. Preparado com uma variedade de temperos, resulta em um prato intenso e aromático, apreciado por seu sabor autêntico e profundidade."
 },
 { 
     nome: "Espetinho Ovino",
@@ -36,15 +36,15 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Hamburguer Ovino",
-    descricao: "Hamburguer Ovino é uma alternativa saborosa aos hambúrgueres tradicionais de carne bovina. Feitos com carne moída de cordeiro e temperos aromáticos, esses hambúrgueres são suculentos e cheios de sabor."
+    descricao: "Criar um blend perfeito para hambúrguer ovino envolve a combinação de diferentes cortes de carne para alcançar um equilíbrio ideal entre sabor, textura e suculência. Por isso a D’Corthes trouxe para você o blend ovino, com uma ótima porcentagem de carne gordurosa e magra. Burguers artesanais sem tempero (sem sal e sem glúten) e produzidos sem conservantes artificiais com o tamanho ideal para sua fome. Prepare na brasa, na frigideira ou grelha mais essa opção para seu churrasco ou lanche  com carnes artesanais que antes você só encontrava em restaurantes."
 },
 { 
     nome: "Alcatra Completa Ovino",
-    descricao: "Localizada na parte privilegiada do animal, a Alcatra Completa Ovina é sinônimo de versatilidade e sabor. Esse corte se destaca por sua capacidade de transformar qualquer refeição em uma celebração de sabores. Extraída da região traseira do cordeiro, abrangendo desde a parte superior da coxa até a lombar, a Alcatra Completa Ovina é perfeita para grelhar, assar ou preparar no churrasco, prometendo sempre um resultado tenro e incrivelmente saboroso. Este corte não apenas satisfaz os paladares mais exigentes, mas também se torna o centro das atenções em qualquer mesa."
+    descricao: "Nossa peça de alcatra completa é composta da picanha, maminha e alcatra do ovino. Seja grelhada, assada ou preparada no churrasco, ela promete entregar um resultado que é sempre tenro e incrivelmente saboroso. Este corte não apenas satisfaz os paladares mais exigentes, mas também se torna o centro das atenções em qualquer mesa. Localizada na parte privilegiada do animal, a Alcatra Completa Ovina é sinônimo de versatilidade e sabor. Esse corte se destaca por sua capacidade de transformar qualquer refeição em uma celebração de sabores."
 },
 { 
     nome: "Carré Francês Ovino",
-    descricao: "Carré Francês Ovino é um corte suculento e saboroso, ideal para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para refeições rápidas e fáceis."
+    descricao: "Com seus ossos longos, uma delicada capa de gordura e aparência elegante, é perfeito para apresentações refinadas. A carne é suave, saborosa e cheia de umidade proporcionada pela gordura delicada do corte. Ideal para assados ou para ser preparado no forno, destacando-se em ocasiões especiais. Localizada na região dorsal é um corte feito perpendicularmente a coluna vertebral do cordeiro, um dos cortes mais nobre do animal."
 },
 { 
     nome: "Costela Prime Ovino",
@@ -60,35 +60,35 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Coxão Mole Ovino",
-    descricao: "Coxão Mole Ovino é um corte suculento e macio, ideal para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Conhecido por sua maciez e menor teor de gordura, o Coxão Mole é ideal para preparos rápidos, como bifes e escalopes. Sua textura suave e sabor delicado o tornam uma escolha popular para pratos leves, porém saborosos! Parte traseira do animal"
 },
 { 
     nome: "Filé Mignon Ovino",
-    descricao: "Filé Mignon Ovino é um corte delicado e suculento, perfeito para grelhados e assados rápidos. Com sua carne macia e saborosa, este corte é uma escolha popular para ocasiões especiais e jantares elegantes."
+    descricao: "O Filé Mignon ovino é extremamente macio e considerado uma iguaria em qualquer menu gourmet. Com pouco ou nenhum marmoreio, é ideal para pratos que requerem uma carne de textura fina e sabor suave. Perfeito para ser servido em medalhões ou assado inteiro. Região lombar, sob as costelas do cordeiro"
 },
 { 
     nome: "Lagarto Coxão Duro Ovino",
-    descricao: "Lagarto Coxão Duro Ovino é um corte versátil e saboroso, ideal para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida e ensopados."
+    descricao: "Este corte combinamos os já conhecidos Coxão Duro e Lagarto,  oferecendo uma mistura de texturas e sabores que combinam. Ideal para cozidos, ensopados e moquecas, onde o longo cozimento transforma sua textura robusta em uma carne macia e saborosa, cheia de aroma. Parte traseira superior do animal"
 },
 { 
     nome: "Ossobuco Ovino",
-    descricao: "Ossobuco Ovino é um corte rico e reconfortante, perfeito para ensopados e cozidos. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida lentamente em molhos aromáticos."
+    descricao: "Rico em colágeno, o Ossobuco é perfeito para cozimentos lentos e úmidos. A carne, ao ser cozida lentamente, torna-se extremamente macia, enquanto o tutano confere um sabor único e uma textura cremosa ao prato. Parte inferior da perna do cordeiro."
 },
 { 
     nome: "Patinho Ovino",
-    descricao: "Patinho Ovino é um corte magro e suculento, ideal para assados lentos e preparações de panela"
+    descricao: "O Patinho é um corte magro, ideal para bifes finos, escalopes e estrogonofes. Sua textura firme e sabor suavemente acentuado permitem que se adapte bem a marinadas e temperos diversos, sendo uma escolha versátil para várias preparações. Parte dianteira da coxa do animal"
 },
 { 
     nome: "Pernil Dessosado Ovino",
-    descricao: "Pernil Dessosado Ovino é um corte suculento e saboroso, perfeito para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para festas e reuniões familiares."
+    descricao: "O Pernil Desossado oferece uma carne rica e saborosa, ideal para assados e preparações que exigem uma peça inteira. Sem os ossos, torna-se mais fácil de levar para travessa e serve bem em ocasiões festivas, onde o sabor intenso e a textura macia são apreciados. Localizada na parte traseira do animal"
 },
 { 
     nome: "Prime Rib Ovino",
-    descricao: "Prime Rib Ovino é um corte suculento e cheio de sabor, perfeito para grelhados e assados. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "O Prime Rib ovino é sinônimo de sofisticação e sabor. Com uma generosa camada de gordura, que mantém a carne suculenta durante o cozimento, é ideal para aquela refeição que quer se destacar pelo aroma e pela textura macia. Serve como peça central em jantares especiais, onde seu sabor rico e presença marcante são celebrados. Corte localizado na parte superior da costela"
 },
 { 
     nome: "Sela Inglesa Ovino",
-    descricao: "Sela Inglesa Ovina é um corte suculento e macio, perfeito para grelhados e assados rápidos. Com sua carne saborosa e suculenta, este corte é uma escolha popular para churrascos e eventos ao ar livre."
+    descricao: "A Sela Inglesa é o corte da parte traseira do lombo, incluindo o filé mignon. É um corte especial que oferece tanto apresentação quanto sabor excepcionais. Ideal para assados de forno, onde a carne pode ser apresentada inteira, destacando-se pela sua suculência e sabor delicado, mas rico. Sua textura é super macia e tem o sabor rico e suculento, com textura amanteigada. É ideal para grelhar e permite diversas combinações com molhos e acompanhamentos. Corte localizado na região lombar do cordeiro."
 },
 { 
     nome: "Stinko Ovino",
@@ -96,7 +96,7 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "T-Bone Ovino",
-    descricao: "T-Bone Ovino é um corte suculento e cheio de sabor, ideal para grelhados e assados. Com sua carne macia e saborosa, este corte é uma escolha popular para churrascos e ocasiões especiais."
+    descricao: "O T-Bone ovino combina o filé mignon com o contrafilé, separados por um osso em T. Este corte oferece o melhor de dois mundos: a maciez do filé e o sabor intenso do contrafilé. Ideal para grelhar, proporciona uma experiência culinária rica e diversificada, perfeita para os amantes de carne que apreciam variedade e profundidade de sabor em um único corte. Região lombar do ovino."
 },
 { 
     nome: "Carré da Bisteca",
@@ -104,7 +104,7 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Pernil com Osso",
-    descricao: "Pernil com Osso é um corte suculento e cheio de sabor, perfeito para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para festas e eventos especiais."
+    descricao: "O Pernil Com Osso ovino é um corte majestoso, ideal para assados festivos e ocasiões especiais. O osso contribui para um sabor mais intenso e uma apresentação impressionante. A carne, quando assada lentamente, torna-se incrivelmente suculenta, com uma textura que desmancha na boca.  Ideal para temperar com ervas aromáticas! Localizada na parte traseira do animal, esse corte se torna o centro das atenções em qualquer mesa."
 },
 { 
     nome: "Picanha",
