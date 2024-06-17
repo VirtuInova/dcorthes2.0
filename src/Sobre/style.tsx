@@ -57,9 +57,9 @@ const data = {
 const styles = {
     titleTextColor: "black",
     rowTitleColor: "black",
-    titleTextSize: "3vw",
-    rowContentTextSize:"3vw",
-    rowTitleTextSize: "3vw"
+    titleTextSize: "2vw",
+    rowContentTextSize:"2vw",
+    rowTitleTextSize: "1.5vw"
 };
 
 
@@ -71,7 +71,7 @@ export function Container (){
         <div className={`w-full h-[45vw] px-[10vw]  max-[425px]:h-[110vw]`} style={{backgroundImage:hs, backgroundSize: 'cover'}}>
             <div className="pl-[6vw] max-[425px]:pl-[0]">
                 <h5 className="text-white text-left pt-[8vw] max-[425px]:text-[6vw]">Quem Somos</h5>
-                <div className="w-[80%] max-[425px]:w-[90%]">
+                <div className="w-[45%] max-[425px]:w-[90%]">
                     <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw] "> Somos a nova referência em <b>cortes primorosos de ovinos e suínos.</b></h1>
                     <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]" >  Nossos passos são firmes e guiados pelo cultivo da 
                     excelência. Nossa motivação é trazer produtos
@@ -90,17 +90,36 @@ export function Container (){
             
         </div>
         
-        <div className="h-[160vw] max-[425px]:h-[400vw]">
+        <div className="h-[260vw] max-[425px]:h-[400vw]">
             <div className={`w-full h-[40vw] max-[425px]:h-[60vw]`}>
                 <div className="flex justify-between px-[10vw] max-[425px]:pr-[0] mt-[5%] max-[425px]:flex-wrap" >
-                        <div className="w-[40%] max-[425px]:w-[80%]">
+                        <div className="w-[60%] max-[425px]:w-[80%]">
                                 <h5 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[6vw]">Nossa história</h5>
                                 <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw]"> Nós, da D’Corthes Carnes Nobres, temos uma história que nos enche de orgulho! </h1>
                                 
-                                <h5 className="text-black text-left text-[2.5vw] mb-[7%] mt-[13%] max-[425px]:text-[6vw]">1991 - O começo</h5>
+                                <h5 className="text-black text-left text-[2.5vw] my-[7%] mt-[13%] max-[425px]:text-[6vw]">1991 - O começo</h5>
                                 <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify"> Anterior à nossa história e essencial para nosso sucesso, a Duporco 
                                 Agronegócio foi fundada em 1991, oriunda de uma pequena criação 
-                                de suínos no Povoado São Domingos, zona rural de Teresina (PI).</h1>
+                                de suínos no Povoado São Domingos, zona rural de Teresina (PI).
+                                <br/>
+                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2000</h5>
+                                <br/>
+                                Cultivando a vontade de empreender por mais uma década e com o anseio de manter o legado familiar vivo, novas unidades produtivas foram incorporadas ao processo produtivo, ampliando o quantitativo de animais e incrementando tecnologias à suinocultura, colocando a empresa como expoente do cenário piauiense do cultivo de suínos.
+                                <br/>
+                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2018</h5>
+                                Início do processo de sucessão familiar da gestão empresarial com a integração de dois novos sócios, que se tornariam os atuais gestores do negócio agropecuário. Desde então, novos caminhos e desafios são perseguidos com o objetivo de expansão das atividades produtivas.
+                                <br/>
+                                
+                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2019</h5>
+                                <br/>
+                                A suinocultura, cultura tradicional da empresa, recepciona duas novas atividades para agregar as soluções ofertadas pela empresa aos clientes: ovinocultura e caprinocultura. Nasce o ideal de construção de um grupo empresarial com múltiplas soluções comerciais aos parceiros da Duporco Agronegócio.
+                                <br/>
+                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2022</h5>
+                                <br/>
+                                Como concretização desse ideal, construímos uma empresa que se tornou sinônimo de qualidade, confiança e compromisso. A D’Corthes Carnes Nobres inicia sua própria história e convida a todos a participar dela.
+
+                                Nesse momento inauguramos uma nova instalação de alto padrão, a Unidade de Beneficiamento de Cortes Cárneos (UBC) com a capacidade de produção de 15 toneladas de carnes por mês.
+                                </h1>
 
                                 <h2 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify" >A D'Cortes é fruto de uma jornada inspiradora que começou há dé
                                 cadas, quando nossos fundadores perceberam a necessidade de 
