@@ -1,8 +1,10 @@
 import 'react-multi-carousel/lib/styles.css';
 import listaOvino from "../assets/Cortes/Ovinos";
 import listaSuino from "../assets/Cortes/Suinos";
+import Modal from 'react-modal';
 
 import { useParams } from 'react-router-dom';
+import React from 'react';
 
 type nutri = {
     porcentagem: string
@@ -209,6 +211,21 @@ const descricoes: {nome: string, descricao: string}[] =[{
 ] 
 
 export function Container (){
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [image, setImage] = React.useState('');
+
+    function openModal() {
+        setIsOpen(true);
+    }
+    
+    function closeModal() {
+        setIsOpen(false);
+    }
+    
+    function setImageProps(image) {
+        setImage(image);
+    }
+
     const { nome } = useParams();
     let corte = listaOvino.find(index => index.nome === nome);
 
@@ -270,13 +287,28 @@ export function Container (){
 
 
     return (
-    <div className="w-full bg-[white] min-h-[100vh]" style={{alignItems:"center"}}>
+    <>
+    <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        <button onClick={closeModal}><h1>X</h1></button>
+        <div className='w-full flex justify-center items-center h-[35rem]'>
+            <img src={image} className="object-cover min-h-[25rem] w-[25rem] rounded-[2vw] hover:border-black"/>   
+        </div>
+      </Modal>
+      <div className="w-full bg-[white] min-h-[100vh]" style={{alignItems:"center"}}>
         
         <div className="h-[100vw] max-[425px]:h-[200vw]">
             <div className={`w-full h-[40vw]`}> 
-                <div className="flex justify-between px-[10vw] pt-[5%] max-[425px]:flex-wrap ">
-                    <div className='h-[30vw] w-[30vw] max-[425px]:w-[50vw] max-[425px]:h-[50vw]'>
-                        <img src={corte?.src} className="object-cover h-full w-full rounded-[2vw]"/>
+                <div className="flex justify-between px-[5rem] pt-[5%] max-[425px]:flex-wrap ">
+                    <div className='h-[30vw] flex mr-[2vw] w-[30rem] max-[425px]:w-[50vw] max-[425px]:h-[50vw]'>
+                    <button onClick={()=>{openModal(); setImageProps(corte?.src)}} className='h-[20rem] p-0 rounded-[2vw] w-[30rem] bg-white flex justify-center items-center'><img src={corte?.src} className="object-cover h-full w-full rounded-[2vw]"/></button>
+                        <div className='ml-[1rem]'>
+                            <button onClick={()=>{openModal(); setImageProps(corte?.srcEmbalado)}} className='h-[10rem] p-0  w-[10rem] bg-white  flex justify-center items-center'><img src={corte?.srcEmbalado} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button>
+                            <button onClick={()=>{openModal(); setImageProps(corte?.srcNutricional)}}className='h-[10rem] p-0  w-[10rem] bg-white flex justify-center items-center'><img src={corte?.srcNutricional} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button>
+                        </div>
                     </div>
                         <div className="w-[50%] max-[425px]:w-full max-[425px]:mt-[3vw]">
                                 <h2 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[4vw]">{nome}</h2>
@@ -286,17 +318,15 @@ export function Container (){
                     
                 </div>
             
-                <div className="w-full mt-[10vw] pl-[10vw]">
+                <div className="w-full mt-[4rem] pl-[5rem]">
                 {corte?.nutri[3] &&
                     <>
                         <div>
                             <h1 className='text-left text-black max-[425px]:text-[3vw]'>INFORMAÇÃO NUTRICIONAL</h1>
                             <h1 className='text-left text-black mt-[1vw] max-[425px]:text-[3vw]'>Porção de 100g. Quantidade por porção %VD(*)</h1>
                         </div>
-                    
-                    
-                    
-                        <div className="flex flex-wrap w-full pr-[15vw] mt-[2vw] ">
+
+                        <div className="flex flex-wrap w-full  mt-[2vw] ">
                            { corte?.nutri.map((index) => (
                                 <div key={index.tipo} className="rounded-[1vw] p-[1vw] w-[20vw] h-[7vw] mr-[2vw] mb-[2vw] max-[425px]:h-[12vw] max-[425px]:w-[30vw]" style={{ border: "1px solid black" }}>
                                     <h1 className="text-left text-black max-[425px]:text-[2vw]">{index.porcentagem}</h1>
@@ -315,7 +345,10 @@ export function Container (){
             </div>
       </div>
 
-    </div>)
+    </div>
+    </>
+    
+    )
 } 
 
 

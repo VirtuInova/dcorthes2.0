@@ -21,6 +21,48 @@ import paleta from './Paleta-Ovino.webp'
 import paletaD from './Paleta-Desossada-Ovino.webp'
 import sarapatel from './Sarapatel-Ovino.webp'
 
+import alcatraEmbalado from './ALCATRACOMPLETA-PICANHA-OVINO-EMBALADO.png'
+import carreEmbalado from './CARRÉ-FRANCÊS-OVINO-EMBALADO.png'
+import costelaEmbalado from './COSTELA-PRIME-OVINO-EMBALADO.png'
+import costelaripaEmbalado from './COSTELA-RIPA-OVINO-EMBALADO.png'
+import carreShortEmbalado from './CARRÉ-FRANCÊS-OVINO-EMBALADO.png'
+import coxaoMoleEmbalado from './COXÃO-MOLE-OVINO-EMBALADO.png'
+import fileEmbalado from './FILÉ-MIGNON-OVINO-EMBALADO.png'
+import lagartoEmbalado from './COXÃO-DURO-COM-LAGARTO-OVINO-EMBALADO.png'
+// import ossobuco from './Ossobuco-Ovino.webp'
+import patinhoEmbalado from './PATINHO-OVINO-EMBALADO.png'
+import pernilEmbalado from './PERNIL-OVINO-EMBALADO.png'
+import primeRibEmbalado from './PRIMERIB-OVINO-EMBALADO-2.png'
+import selaInglesaEmbalado from './SELA-INGLESA-OVINO-EMBALADO.png'
+import stinkoEmbalado from './STINCO-OVINO-EMBALADO-1.png'
+// import tbone from './T-Bone-Ovino.webp'
+import cEspecialEmbalado from './COSTELA-TRADICIONAL-OVINO-EMBALADO.png'
+import guisadoPEmbalado from './GUISADO-ENSOPADO-OVINO.png'
+// import paleta from './PALETA-SEM-OSSO-OVINO-EMBALADO.png'
+import paletaDEmbalado from './PALETA-SEM-OSSO-OVINO-EMBALADO.png'
+import sarapatelEmbalado from './SARAPATEL-OVINO-EMBALADO.png'
+
+import alcatraNutricional from '.'
+import carreNutricional from './CARRÉ FRANCÊS DE OVINO.png'
+import costelaNutricional from './COSTELA ESPECIAL DE OVINO.png'
+import costelaripaNutricional from './COSTELA RIPA DE OVINO.png'
+import carreShortNutricional from './CARRÉ FRANCÊS DE OVINO.png'
+import coxaoMoleNutricional from '.'
+import fileNutricional from './FILÉ MIGNON DE OVINO.png'
+import lagartoNutricional from '.'
+// import ossobuco from './Ossobuco-Ovino.webp'
+import patinhoNutricional from '.'
+import pernilNutricional from './PERNIL DE OVINO.png'
+import primeRibNutricional from './PRIME RIB DE OVINO.png'
+import selaInglesaNutricional from './SELA INGLESA DE OVINO.png'
+import stinkoNutricional from './STEAK (PERNIL) DE OVINO.png'
+import tboneNutricional from './T-BONE DE OVINO.png'
+import cEspecialNutricional from './COSTELA ESPECIAL DE OVINO.png'
+import guisadoPNutricional from '.'
+// import paleta from './PALETA-SEM-OSSO-OVINO-EMBALADO.png'
+import paletaDEmbaladoNutricional from './PALETA DE OVINO DESOSSADA.png'
+import sarapatelEmbaladoNutricional  from '.'
+
 type NutritionalInfo = {
     porcentagem: string;
     tipo: string;
@@ -30,11 +72,13 @@ type NutritionalInfo = {
 type Lista = {
     nome: string;
     src: string;
+    srcEmbalado: string;
+    srcNutricional: string;
     nutri: NutritionalInfo[];
 };
 
 const lista: Lista[] = [
-    {nome: "Costela Especial Ovino", src:cEspecial, nutri: [{
+    {nome: "Costela Especial Ovino", src:cEspecial, srcEmbalado: cEspecialEmbalado, srcNutricional:cEspecialNutricional, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
@@ -84,12 +128,12 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 213
     }] }, 
-    {nome: "Guisado Pescoço Ovino", src:guisadoP, nutri: [{
+    {nome: "Guisado Pescoço Ovino", src:guisadoP,srcEmbalado:guisadoPEmbalado,srcNutricional:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome: "Paleta Ovino", src:paleta, nutri:  [{
+    {nome: "Paleta Ovino", src:paleta,srcEmbalado:'', srcNutricional:'', nutri:  [{
         porcentagem: "10%",
         tipo:"Valor Energético(g)",
         valor: 205
@@ -139,7 +183,7 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 59
     }]}, 
-    {nome: "Paleta Desossada Ovino", src:paletaD, nutri:  [{
+    {nome: "Paleta Desossada Ovino", src:paletaD, srcNutricional:paletaDEmbaladoNutricional,srcEmbalado:paletaDEmbalado, nutri:  [{
         porcentagem: "6%",
         tipo:"Valor Energético(g)",
         valor: 125
@@ -189,27 +233,27 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 56
     }]}, 
-    {nome: "Sarapatel Ovino", src:sarapatel, nutri: [{
+    {nome: "Sarapatel Ovino", src:sarapatel,srcNutricional:'',srcEmbalado:sarapatelEmbalado, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome: "Espetinho Ovino", src:esp, nutri: [{
+    {nome: "Espetinho Ovino", src:esp, srcNutricional:'',srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome:"Hamburguer Ovino", src:ham, nutri: [{
+    {nome:"Hamburguer Ovino", src:ham, srcNutricional:'',srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Alcatra Completa Ovino" , src: alcatra, nutri: [{
+    {nome: "Alcatra Completa Ovino" , src: alcatra,srcNutricional:'',srcEmbalado:alcatraEmbalado, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Carré Francês Ovino", src:carre, nutri:  [{
+    {nome: "Carré Francês Ovino", src:carre, srcNutricional:carreNutricional,srcEmbalado:carreEmbalado, nutri:  [{
         porcentagem: "9%",
         tipo:"Valor Energético(g)",
         valor: 186
@@ -259,13 +303,13 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 57
     }]}, 
-    {nome:"Costela Prime Ovino", src:costela, nutri: [{
+    {nome:"Costela Prime Ovino", src:costela, srcNutricional:costelaNutricional,srcEmbalado:costelaEmbalado, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
 
-    {nome:"Costela Ripa Ovino", src:costelaripa, nutri: 
+    {nome:"Costela Ripa Ovino", src:costelaripa, srcNutricional:costelaripaNutricional,srcEmbalado:costelaripaEmbalado, nutri: 
     [{
         porcentagem: "12%",
         tipo:"Valor Energético(g)",
@@ -317,17 +361,17 @@ const lista: Lista[] = [
         valor: 70
     }]},
 
-    {nome:"Carré Short Ovino", src:carreShort, nutri: [{
+    {nome:"Carré Short Ovino", src:carreShort, srcNutricional:carreShortNutricional, srcEmbalado:carreShortEmbalado,nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Coxão Mole Ovino", src:coxaoMole, nutri: [{
+    {nome:"Coxão Mole Ovino", src:coxaoMole,srcNutricional:'',srcEmbalado:coxaoMoleEmbalado, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Filé Mignon Ovino", src:file, nutri:  [{
+    {nome:"Filé Mignon Ovino", src:file, srcNutricional:fileNutricional,srcEmbalado: fileEmbalado, nutri:  [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 210
@@ -377,12 +421,12 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 70
     }]},
-    {nome:"Lagarto Coxão Duro Ovino", src:lagarto, nutri: [{
+    {nome:"Lagarto Coxão Duro Ovino", src:lagarto, srcNutricional:'',srcEmbalado: lagartoEmbalado,nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Ossobuco Ovino", src:ossobuco, nutri: [{
+    {nome:"Ossobuco Ovino", src:ossobuco,srcNutricional:'', srcEmbalado:'', nutri: [{
         porcentagem: "10%",
         tipo:"Valor Energético(g)",
         valor: 206
@@ -432,12 +476,12 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 59
     }]},
-    {nome:"Patinho Ovino", src:patinho, nutri: [{
+    {nome:"Patinho Ovino", src:patinho, srcNutricional:'',srcEmbalado:patinhoEmbalado,nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Pernil Dessosado Ovino", src:pernil, nutri:  [{
+    {nome:"Pernil Dessosado Ovino", src:pernil, srcNutricional:pernilNutricional,srcEmbalado:pernilEmbalado, nutri:  [{
         porcentagem: "10%",
         tipo:"Valor Energético(g)",
         valor: 203
@@ -487,7 +531,7 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 65
     }]},
-    {nome:"Prime Rib Ovino", src:primeRib, nutri:  [{
+    {nome:"Prime Rib Ovino", src:primeRib, srcNutricional:primeRibNutricional,srcEmbalado:primeRibEmbalado,nutri:  [{
         porcentagem: "10%",
         tipo:"Valor Energético(g)",
         valor: 200
@@ -537,7 +581,7 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 55
     }]},
-    {nome:"Sela Inglesa Ovino", src:selaInglesa, nutri:  [{
+    {nome:"Sela Inglesa Ovino", src:selaInglesa, srcNutricional:selaInglesaNutricional,srcEmbalado:selaInglesaEmbalado, nutri:  [{
         porcentagem: "12%",
         tipo:"Valor Energético(g)",
         valor: 238
@@ -587,7 +631,7 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 74
     }]},
-    {nome:"Stinko Ovino", src:stinko, nutri:  [{
+    {nome:"Stinko Ovino", src:stinko, srcNutricional:stinkoNutricional,srcEmbalado:stinkoEmbalado, nutri:  [{
         porcentagem: "10%",
         tipo:"Valor Energético(g)",
         valor: 203
@@ -637,7 +681,7 @@ const lista: Lista[] = [
         tipo:"Sódio(mg)",
         valor: 65
     }]},
-    {nome:"T-Bone Ovino", src:tbone, nutri:  [{
+    {nome:"T-Bone Ovino", srcEmbalado:'', srcNutricional:tboneNutricional,src:tbone, nutri:  [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 210

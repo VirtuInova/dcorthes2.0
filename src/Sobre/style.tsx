@@ -1,6 +1,9 @@
 import { faq, heroSobre, infancia, linhaTempo, porco} from "../assets"
 import 'react-multi-carousel/lib/styles.css';
 import Faq from "react-faq-component";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { motion } from "framer-motion"
 
 const data = {
     title: "Perguntas frequentes",
@@ -54,12 +57,13 @@ const data = {
     ],
 };
 
+
 const styles = {
     titleTextColor: "black",
     rowTitleColor: "black",
     titleTextSize: "2vw",
-    rowContentTextSize:"2vw",
-    rowTitleTextSize: "1.5vw"
+    rowContentTextSize:"1.5vw",
+    rowTitleTextSize: "1.5vw",
 };
 
 
@@ -67,21 +71,21 @@ export function Container (){
     const hs = `url(${heroSobre})`; 
     
     return (
-    <div className="w-full bg-[white]" style={{alignItems:"center"}}>
-        <div className={`w-full h-[45vw] px-[10vw]  max-[425px]:h-[110vw]`} style={{backgroundImage:hs, backgroundSize: 'cover'}}>
-            <div className="pl-[6vw] max-[425px]:pl-[0]">
-                <h5 className="text-white text-left pt-[8vw] max-[425px]:text-[6vw]">Quem Somos</h5>
-                <div className="w-[45%] max-[425px]:w-[90%]">
-                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw] "> Somos a nova referência em <b>cortes primorosos de ovinos e suínos.</b></h1>
-                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]" >  Nossos passos são firmes e guiados pelo cultivo da 
+    <div className="w-full  bg-[white]" style={{alignItems:"center"}}>
+        <div className={`w-full h-[20rem] px-[17%] max-[425px]:h-[110vw]`} style={{backgroundImage:hs, backgroundSize: 'contain'}}>
+            <div className=" max-[425px]:pl-[0]">
+                <h5 className="text-white text-[1.5rem] text-left pt-[1vw] max-[425px]:text-[6vw]">Quem Somos</h5>
+                <div className="w-[70%] max-[425px]:w-[90%]">
+                    <h1 className="text-left text-[0.8rem] mt-[5%] max-[425px]:text-[3vw] "> Somos a nova referência em <b>cortes primorosos de ovinos e suínos.</b></h1>
+                    <h1 className="text-left text-[0.8rem] mt-[5%] max-[425px]:text-[3vw]" >  Nossos passos são firmes e guiados pelo cultivo da 
                     excelência. Nossa motivação é trazer produtos
                     impecáveis para o mercado gastronômico nacio
                     nal.</h1>
-                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]">  Enraizados no passado, mas com um olhar que 
+                    <h1 className="text-left text-[0.8rem] mt-[5%] max-[425px]:text-[3vw]">  Enraizados no passado, mas com um olhar que 
                     desafia o presente, a D’Corthes Carnes Nobres 
                     convida você a degustar não apenas a carne, mas 
                     a nossa essência – a pura arte de servir bem. </h1>
-                    <h1 className="text-left text-[1vw] mt-[5%] max-[425px]:text-[3vw]"> A D’Corthes Carnes Nobres destaca-se, ainda, 
+                    <h1 className="text-left text-[0.8rem] mt-[5%] max-[425px]:text-[3vw]"> A D’Corthes Carnes Nobres destaca-se, ainda, 
                     pela conformidade de sua Unidade de Beneficia
                     mento de Carnes em apresentar o Selo de Inspe
                     ção Estadual ADAPI/SIE/PI sob nº006/069.</h1>
@@ -90,64 +94,34 @@ export function Container (){
             
         </div>
         
-        <div className="h-[260vw] max-[425px]:h-[400vw]">
-            <div className={`w-full h-[40vw] max-[425px]:h-[60vw]`}>
-                <div className="flex justify-between px-[10vw] max-[425px]:pr-[0] mt-[5%] max-[425px]:flex-wrap" >
-                        <div className="w-[60%] max-[425px]:w-[80%]">
-                                <h5 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[6vw]">Nossa história</h5>
-                                <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw]"> Nós, da D’Corthes Carnes Nobres, temos uma história que nos enche de orgulho! </h1>
-                                
-                                <h5 className="text-black text-left text-[2.5vw] my-[7%] mt-[13%] max-[425px]:text-[6vw]">1991 - O começo</h5>
-                                <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify"> Anterior à nossa história e essencial para nosso sucesso, a Duporco 
-                                Agronegócio foi fundada em 1991, oriunda de uma pequena criação 
-                                de suínos no Povoado São Domingos, zona rural de Teresina (PI).
-                                <br/>
-                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2000</h5>
-                                <br/>
-                                Cultivando a vontade de empreender por mais uma década e com o anseio de manter o legado familiar vivo, novas unidades produtivas foram incorporadas ao processo produtivo, ampliando o quantitativo de animais e incrementando tecnologias à suinocultura, colocando a empresa como expoente do cenário piauiense do cultivo de suínos.
-                                <br/>
-                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2018</h5>
-                                Início do processo de sucessão familiar da gestão empresarial com a integração de dois novos sócios, que se tornariam os atuais gestores do negócio agropecuário. Desde então, novos caminhos e desafios são perseguidos com o objetivo de expansão das atividades produtivas.
-                                <br/>
-                                
-                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2019</h5>
-                                <br/>
-                                A suinocultura, cultura tradicional da empresa, recepciona duas novas atividades para agregar as soluções ofertadas pela empresa aos clientes: ovinocultura e caprinocultura. Nasce o ideal de construção de um grupo empresarial com múltiplas soluções comerciais aos parceiros da Duporco Agronegócio.
-                                <br/>
-                                <h5 className="text-black text-left text-[2.5vw] my-[7%] max-[425px]:text-[6vw]">2022</h5>
-                                <br/>
-                                Como concretização desse ideal, construímos uma empresa que se tornou sinônimo de qualidade, confiança e compromisso. A D’Corthes Carnes Nobres inicia sua própria história e convida a todos a participar dela.
-
-                                Nesse momento inauguramos uma nova instalação de alto padrão, a Unidade de Beneficiamento de Cortes Cárneos (UBC) com a capacidade de produção de 15 toneladas de carnes por mês.
-                                </h1>
-
-                                <h2 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify" >A D'Cortes é fruto de uma jornada inspiradora que começou há dé
-                                cadas, quando nossos fundadores perceberam a necessidade de 
-                                elevar os padrões da indústria de cortes de carne.</h2>
-                        </div>
-
-                    <div>
-                        <img src={infancia} className="h-[30vw] max-[425px]:h-[70vw] max-[425px]:mt-[5vw]"></img>
-                    </div>
-                </div>
-            
-                <div className="flex w-full max-[425px]:mt-[20vw]">
-                    <img src={porco} className="h-[15vw] max-[425px]:h-[25vw]"></img>
-                    <div className="flex justify-center w-[50%] max-[425px]:w-[65%]  ml-[2vw]">
+        <div className="h-[150rem] max-[425px]:h-[400vw]">
+            <div className={`w-full h-[20rem] max-[425px]:h-[60vw]`}>
+            <div className="px-[17%] max-[425px]:pr-[0] mt-[5%] max-[425px]:flex-wrap" >
+                <h5 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[6vw]">Nossa história</h5>
+                <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw]"> Nós, da D’Corthes Carnes Nobres, temos uma história que nos enche de orgulho! </h1>
+                    {Storie(stories)}
+            </div>
+                <div className="flex px-[17%] w-full max-[425px]:mt-[20vw]">
+                    <img src={porco} className="h-[15rem] max-[425px]:h-[25vw]"></img>
+                    <div className="flex justify-center w-[60%] max-[425px]:w-[65%]  ml-[2vw]">
                         <img src={linhaTempo} className="object-contain h-[15vw] max-[425px]:h-[25vw] "></img>
                     </div>
                 </div>
 
-                <div id="missao" className="bg-black h-[50vw] max-[425px]:h-[130vw]">
-                    <h5 className="text-white pt-[3%] max-[425px]:text-[5vw]">Aqui todos os MOMENTOS são nobres!</h5>
+                <div id="missao" className="bg-black px-[5%] h-[30rem] max-[425px]:h-[130vw]">
+                    <h5 className="text-white text-[2rem] pt-[3%] max-[425px]:text-[5vw]">Aqui todos os MOMENTOS são nobres!</h5>
                     <div className="flex items-end max-[425px]:items-center h-full max-[425px]:h-[90%] justify-between max-[425px]:mt-[2%] px-[10vw] max-[425px]:flex-wrap">
-                        <div className="w-[30%] max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[30vw] max-[425px]:h-[35vw] rounded-[1vw]">
-                            <h2 className="text-black text-[2w] text-left max-[425px]:text-[4vw]" >Missão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[3vw]">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
-                        </div>
-                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[1%] px-[2vw] pt-[1vw] max-[425px]:h-[35vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                        <motion.div 
+                        whileHover={{height:'20rem'}}  
+                        className="w-[30%] overflow-hidden max-[425px]:w-full px-[2vw] pt-[1vw] border-white bg-white h-[5rem] mb-[5rem] max-[425px]:h-[35vw] rounded-[1vw]">
+                            <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Missão</h2>
+                            <h1 className="text-black mt-[2rem] text-[0.8rem] text-justify max-[425px]:text-[3vw]">Oferecer alimentos de origem animal com qualidade, praticidade, confiança e segurança. Ser um elo de conexão entre pessoas que amam compartilhar momentos, conhecimento e inovação. Apoiar o desenvolvimento científico e tecnológico no âmbito da produção animal.</h1>
+                        </motion.div>
+                        <motion.div 
+                        whileHover={{height:'20rem'}}
+                        className="w-[30%] max-[425px]:w-full  overflow-hidden max-[425px]:mt-[1%] px-[2vw] pt-[1vw] max-[425px]:h-[35vw] border-white bg-white h-[5rem] mb-[5rem] rounded-[1vw]">
                             <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Visão</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-justify max-[425px]:text-[3vw] ">Sonhamos grande! Queremos ser o nome 
+                            <h1 className="text-black mt-[2vw] text-[0.8rem] text-justify max-[425px]:text-[3vw] ">Sonhamos grande! Queremos ser o nome 
                             que vem à mente e ao coração quando se 
                             pensa em alimentos de origem animal. 
                             Almejamos ser uma referência, não só 
@@ -155,16 +129,18 @@ export function Container (){
                             serviços, mas pela maneira como nos
                             relacionamos com clientes, colaborado
                             res e fornecedores. </h1>
-                        </div>
-                        <div className="w-[30%] max-[425px]:w-full max-[425px]:mt-[2%] max-[425px]:h-[25vw] px-[2vw] pt-[1vw] border-white bg-white h-[30vw] rounded-[1vw]">
+                        </motion.div >
+                        <motion.div  
+                         whileHover={{height:'20rem'}}
+                        className="w-[30%] max-[425px]:w-full overflow-hidden max-[425px]:mt-[2%] max-[425px]:h-[25vw] px-[2vw] pt-[1vw] border-white bg-white h-[5rem] rounded-[1vw] mb-[5rem]">
                             <h2 className="text-black text-[2vw] text-left max-[425px]:text-[4vw]" >Valores</h2>
-                            <h1 className="text-black mt-[2vw] text-[1vw] text-left max-[425px]:text-[3vw]" >Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
-                        </div>
+                            <h1 className="text-black mt-[2vw] text-[0.8rem] text-left max-[425px]:text-[3vw]" >Colaboração, Excelência, Inovação, Capricho, Responsabilidade Socioambiental, Visão Integrada, Referência, Empatia e Simpatia</h1>
+                        </motion.div >
                     
                     </div>
                 </div>
 
-                <div id="faq" className="bg-white mb-[10%] h-[50vw] flex-wrap justify-between px-[10vw] mt-[5vw]">
+                <div id="faq" className="bg-white mb-[10%] h-[50vw] flex-wrap justify-between px-[17%] mt-[5vw]">
                     <img src={faq} className="h-[30%]"></img>
                     <div className="h-[40vw] mt-[2%] overflow-y-scroll">
                         <Faq
@@ -180,6 +156,77 @@ export function Container (){
     </div>)
 } 
 
+const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items:1
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items:1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 425, min: 0 },
+      items: 1
+    }
+  };
 
+type Lista = {
+    title: string
+    text: string
+    src: string
+}
+const stories: Lista[]  = [{
+    title: '1991 - O começo',
+    text: "Anterior à nossa história e essencial para nosso sucesso, a Duporco Agronegócio foi fundada em 1991, oriunda de uma pequena criação de suínos no Povoado São Domingos, zona rural de Teresina (PI). A D'Cortes é fruto de uma jornada inspiradora que começou há dé cadas, quando nossos fundadores perceberam a necessidade de elevar os padrões da indústria de cortes de carne.",
+    src: ''
+},
+{
+    title: '2000',
+    text: 'Cultivando a vontade de empreender por mais uma década e com o anseio de manter o legado familiar vivo, novas unidades produtivas foram incorporadas ao processo produtivo, ampliando o quantitativo de animais e incrementando tecnologias à suinocultura, colocando a empresa como expoente do cenário piauiense do cultivo de suínos.',
+    src: ''
+},
+{
+    title: '2018',
+    text: 'Início do processo de sucessão familiar da gestão empresarial com a integração de dois novos sócios, que se tornariam os atuais gestores do negócio agropecuário. Desde então, novos caminhos e desafios são perseguidos com o objetivo de expansão das atividades produtivas.',
+    src: ''
+},
+{
+    title: '2019',
+    text: 'A suinocultura, cultura tradicional da empresa, recepciona duas novas atividades para agregar as soluções ofertadas pela empresa aos clientes: ovinocultura e caprinocultura. Nasce o ideal de construção de um grupo empresarial com múltiplas soluções comerciais aos parceiros da Duporco Agronegócio.',
+    src: ''
+},
+{
+    title: '2022',
+    text: 'Como concretização desse ideal, construímos uma empresa que se tornou sinônimo de qualidade, confiança e compromisso. A D’Corthes Carnes Nobres inicia sua própria história e convida a todos a participar dela. Nesse momento inauguramos uma nova instalação de alto padrão, a Unidade de Beneficiamento de Cortes Cárneos (UBC) com a capacidade de produção de 15 toneladas de carnes por mês.',
+    src: ''
+}]
+function Storie(lista: Lista[]){
+    return (
+        <div className="w-full mt-[1vw] mb-[2vw] h-[30rem] max-[425px]:h-[40vw] flex items-center">
+            <Carousel autoPlay={true} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className="w-full h-full">
+                {
+                    lista.map((index) => (
+                        <div key={index.title} className="flex px-[10vw] justify-between h-[60rem]  items-center max-[425px]:pr-[0] mt-[5%] max-[425px]:flex-wrap" >
+                            <div className="w-[50%] h-[30rem] max-[425px]:w-[80%]"> 
+                                    <h5 className="text-black text-left text-[2.5vw] my-[7%] mt-[13%] max-[425px]:text-[6vw]">{index.title}</h5>
+                                    <h1 className="text-black text-left mt-[2%] max-[425px]:text-[3vw] max-[425px]:text-justify"> {index.text} </h1>  
+                            </div>
+                            
+                            <div>
+                                <img src={infancia} className="h-[18rem] max-w-[20vw] max-h-[20vw] w-[18rem] max-[425px]:h-[70vw] max-[425px]:mt-[5vw]"></img>
+                            </div>
+                        </div>
+                    ))
+                }
+            </Carousel>
+            
+        </div>
+    )
+}
 
 

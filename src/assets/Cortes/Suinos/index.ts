@@ -34,141 +34,142 @@ type NutritionalInfo = {
 type Lista = {
     nome: string;
     src: string;
+    srcEmbalado: string;
     nutri: NutritionalInfo[];
 };
 
 const lista: Lista[] = [
-    {nome: "Carré da Bisteca" , src: carreB, nutri: [{
+    {nome: "Carré da Bisteca" ,srcEmbalado:'', src: carreB, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Pernil com Osso" , src: pernil, nutri: [{
+    {nome: "Pernil com Osso" ,srcEmbalado:'', src: pernil, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Picanha" , src: picanha, nutri: [{
+    {nome: "Picanha" , src: picanha, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Alcatra Suína" , src: alcatra, nutri: [{
+    {nome: "Alcatra Suína" , src: alcatra,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Bife Ancho", src:bife, nutri: [{
+    {nome: "Bife Ancho", src:bife, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome:"Coxão Duro", src:coxao, nutri: [{
+    {nome:"Coxão Duro", src:coxao, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Coxão Mole", src:coxaoMole, nutri: [{
+    {nome:"Coxão Mole", src:coxaoMole, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Filé Mignon", src:file, nutri: [{
+    {nome:"Filé Mignon", src:file, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Maminha", src:maminha, nutri: [{
+    {nome:"Maminha", src:maminha, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Ossobuco", src:ossobuco, nutri: [{
+    {nome:"Ossobuco", src:ossobuco, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Panceta", src:pancheta, nutri: [{
+    {nome:"Panceta", src:pancheta, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Patinho", src:patinho, nutri: [{
+    {nome:"Patinho", src:patinho,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Porqueta", src:porqueta, nutri: [{
+    {nome:"Porqueta", src:porqueta,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Prime Rib", src:primeRib, nutri: [{
+    {nome:"Prime Rib", src:primeRib,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Short-Rib", src:shortRib, nutri: [{
+    {nome:"Short-Rib", src:shortRib,srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Suan", src:suan, nutri: [{
+    {nome:"Suan", src:suan, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"T-Bone", src:tbone, nutri: [{
+    {nome:"T-Bone", src:tbone, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Tomahawk", src:tomahawk, nutri: [{
+    {nome:"Tomahawk", src:tomahawk, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Lagarto", src:lagarto, nutri: [{
+    {nome:"Lagarto", src:lagarto,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Carré Francês", src:carre, nutri: [{
+    {nome:"Carré Francês", src:carre,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Espetinho Suíno" , src: espSuino, nutri: [{
+    {nome: "Espetinho Suíno" , srcEmbalado:'',src: espSuino, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Carré-da-bisteca" , src: carre, nutri: [{
+    {nome: "Carré-da-bisteca" , srcEmbalado:'',src: carre, nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome: "Costela", src:costela, nutri: [{
+    {nome: "Costela", src:costela,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome: "Paleta", src:paleta, nutri: [{
+    {nome: "Paleta", src:paleta, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]}, 
-    {nome:"Joelho", src:joelho, nutri: [{
+    {nome:"Joelho", src:joelho, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Pés", src:pes, nutri: [{
+    {nome:"Pés", src:pes,srcEmbalado:'', nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213
     },]},
-    {nome:"Toucinho", src:toucinho, nutri: [{
+    {nome:"Toucinho", src:toucinho, srcEmbalado:'',nutri: [{
         porcentagem: "11%",
         tipo:"Valor Energético(g)",
         valor: 213

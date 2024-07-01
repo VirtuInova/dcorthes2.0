@@ -11,7 +11,7 @@ const list04: informations[] = [{nome:"Nossos contatos", url:""}, {nome:"Experi√
 
 export function Container (){
     return (
-    <div className="w-full h-[40vw] bg-[black] flex px-[5%]" style={{alignItems:"center"}}>
+    <div className="w-full px-[15%] h-[40vw] bg-[black] flex " style={{alignItems:"center"}}>
         
         <div className="flex">
             {RedesSociais()}

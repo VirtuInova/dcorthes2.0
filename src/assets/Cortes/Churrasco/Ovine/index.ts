@@ -1,18 +1,18 @@
-import alcatra from './Alcatra-completa-Ovino.webp'
-import carre from './Carré-Francês-Ovino.webp'
-import costela from './Costela-Prime-Ovino.webp'
-import costelaripa from './Costela-Ripa-Ovino.webp'
-import carreShort from './Carré-Short-Ovino.webp'
-import coxaoMole from './Coxão-Mole-Ovino.webp'
-import file from './Filé-Mignon-Ovino.webp'
-import lagarto from './Lagarto-Coxão-Duro-Ovino.webp'
-import ossobuco from './Ossobuco-Ovino.webp'
-import patinho from './Patinho-Ovino.webp'
-import pernil from './Pernil-Dessosado-Ovino.webp'
-import primeRib from './Prime-Rib-Ovino.webp'
-import selaInglesa from './Sela-Inglesa-Ovino.webp'
-import stinko from './Stinko-Ovino.webp'
-import tbone from './T-Bone-Ovino.webp'
+import alcatra from './ALCATRACOMPLETA-PICANHA-OVINO-EMBALADO.png'
+import carre from './CARRÉ-FRANCÊS-OVINO-EMBALADO.png'
+import costela from './COSTELA-PRIME-OVINO-EMBALADO.png'
+import costelaripa from './COSTELA-RIPA-OVINO-EMBALADO.png'
+import carreShort from './CARRÉ-FRANCÊS-OVINO-EMBALADO.png'
+import coxaoMole from './COXÃO-MOLE-OVINO-EMBALADO.png'
+import file from './FILÉ-MIGNON-OVINO-EMBALADO.png'
+import lagarto from './COXÃO-DURO-COM-LAGARTO-OVINO-EMBALADO.png'
+// import ossobuco from './Ossobuco-Ovino.webp'
+import patinho from './PATINHO-OVINO-EMBALADO.png'
+import pernil from './PERNIL-DESSOSADO-OVINO-EMBALADO.png'
+import primeRib from './PRIMERIB-OVINO-EMBALADO-2.png'
+import selaInglesa from './SELA-INGLESA-OVINO-EMBALADO.png'
+import stinko from './STINCO-OVINO-EMBALADO-1.png'
+// import tbone from './T-Bone-Ovino.webp'
 
 type Lista = {
     nome: string
@@ -27,12 +27,12 @@ const lista: Lista[] = [
     {nome:"Coxão Mole Ovino", src:coxaoMole},
     {nome:"Filé Mignon Ovino", src:file},
     {nome:"Lagarto Coxão Duro Ovino", src:lagarto},
-    {nome:"Ossobuco Ovino", src:ossobuco},
+    // {nome:"Ossobuco Ovino", src:ossobuco},
     {nome:"Patinho Ovino", src:patinho},
     {nome:"Pernil Dessosado Ovino", src:pernil},
     {nome:"Prime Rib Ovino", src:primeRib},
     {nome:"Sela Inglesa Ovino", src:selaInglesa},
     {nome:"Stinko Ovino", src:stinko},
-    {nome:"T-Bone Ovino", src:tbone},
+    // {nome:"T-Bone Ovino", src:tbone},
 ]
 export default lista

@@ -3,6 +3,7 @@ import { buttonHeader, logoHeader } from "../assets"
 import Modal from 'react-modal';
 import { Pivot as Hamburger } from 'hamburger-react'
 import { slide as Menu } from 'react-burger-menu'
+import { Dropdown } from "flowbite-react";
 
 const customStyles = {
     content: {
@@ -65,13 +66,12 @@ export function Container (){
                 </div>
                 
         </Modal>
-        <div className="w-full h-[10vw] bg-[black] flex max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
+        <div className="w-full px-[15%] h-[5rem] bg-[black] flex max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
         {Image()}
         {Options()}
-        <div className="w-[15vw] h-[10vw] flex justify-center ml-[4%]" style={{alignItems:"center"}}>
-            <a href="#" onClick={openModal} className="max-[425px]:hidden"><img src={buttonHeader}/></a>
+        <div className="w-[8rem] h-[10vw] flex justify-center ml-[15%]" style={{alignItems:"center"}}>
+            <a href="#" onClick={openModal} className="w-[10vw] max-[425px]:hidden"><img src={buttonHeader}/></a>
             <div className="min-[426px]:hidden "><Hamburger onToggle={handleOnOpen} toggled={open} color="white" size={30} hideOutline={true}/></div>
-        
         </div>
     </div>
         </>
@@ -80,7 +80,7 @@ export function Container (){
 
 function Image(){
     return (
-        <div className="w-[20%] max-[425px]:w-[30%] h-[10vw] flex justify-center ml-[2vw] max-[425px]:ml-[4vw] max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
+        <div className="w-[8rem] max-[425px]:w-[30%] h-[10vw] flex justify-center ml-[2vw] max-[425px]:ml-[4vw] max-[425px]:h-[20vw]" style={{alignItems:"center"}}>
             <a href="/" ><img src={logoHeader} className="max-[425px]:h-[20vw]"/></a>
         </div>
     
@@ -88,12 +88,17 @@ function Image(){
 }
 
 function Options(){
+
+
     return ( 
-        <div className="w-[50%] ml-[5%] flex row-auto justify-between ">
+        <div className="w-[50%]  ml-[10%] flex row-auto justify-between items-center">
             <a href="/sobre" className="max-[425px]:hidden"><h1 >Sobre</h1></a>
             <a href="/cortes" className="max-[425px]:hidden"><h1>Nossos Cortes</h1></a>
             {/* <h1>Cozinha Nobre</h1> */}
-            <a href="/produtos" className="max-[425px]:hidden"><h1>Produtos</h1></a>
+            <Dropdown  label="Produtos"  dismissOnClick={false} className="h-[3vw]bg-black" style={{backgroundColor:"black"}}>
+                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos">Ovinos</Dropdown.Item>
+                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos">Suínos</Dropdown.Item>
+            </Dropdown>
             {/* <h1>Parcerias</h1> */}
         </div>
     )
