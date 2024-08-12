@@ -40,7 +40,6 @@ export function Container (){
         <Menu  disableAutoFocus styles={{bmBurgerButton:{display:"none"}, bmBurgerBars:{display:"none"}}}  width={ 250 } isOpen={open} onOpen={ handleOnOpen } onClose={ handleOnClose } className="pt-[20vw] bg-white">
             <a id="sobre" className="menu-item" href="/"><h1 className="text-black text-[4vw]">Home</h1></a>
             <a id="sobre" className="menu-item" href="/sobre"><h1 className="text-black text-[4vw] mt-[5%]">Sobre</h1></a>
-            <a id="produtos" className="menu-item" href="/produtos"><h1 className="text-black text-[4vw] mt-[5%]">Produtos</h1></a>
             <a id="cortes" className="menu-item" href="/cortes"><h1 className="text-black text-[4vw] mt-[5%]">Cortes</h1></a>
             <a id="mapa" className="menu-item" href="/mapa"><h1 className="text-black text-[4vw] mt-[5%]">Mapa</h1></a>
         </Menu>
@@ -96,8 +95,8 @@ function Options(){
             <a href="/cortes" className="max-[425px]:hidden"><h1>Nossos Cortes</h1></a>
             {/* <h1>Cozinha Nobre</h1> */}
             <Dropdown  label="Produtos"  dismissOnClick={false} className="h-[3vw]bg-black" style={{backgroundColor:"black"}}>
-                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos">Ovinos</Dropdown.Item>
-                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos">Suínos</Dropdown.Item>
+                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos/ovinos">Ovinos</Dropdown.Item>
+                <Dropdown.Item className="bg-black text-white hover:text-black hover:bg-white" as="a" href="/produtos/suinos">Suínos</Dropdown.Item>
             </Dropdown>
             {/* <h1>Parcerias</h1> */}
         </div>

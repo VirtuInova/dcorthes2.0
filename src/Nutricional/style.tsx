@@ -110,7 +110,7 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Picanha",
-    descricao: "Picanha Suína é um corte suculento e saboroso, perfeito para churrascos e grelhados. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e reuniões familiares."
+    descricao: "Retirada da parte traseira do suíno, a picanha suína é um corte suculento e macio, com um sabor suave e levemente adocicado. Ideal para grelhar ou assar, pode ser acompanhada por legumes grelhados e um bom vinho tinto. Um corte que vai elevar seu churrasco a outro nível!"
 },
 { 
     nome: "Alcatra Suína",
@@ -122,15 +122,15 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Coxão Duro",
-    descricao: "Coxão Duro Suíno é um corte versátil e saboroso, perfeito para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida e ensopados."
+    descricao: "Extraído da parte traseira, o coxão duro é um corte mais firme, ideal para cozidos e ensopados. Seu sabor robusto combina bem com legumes e ervas aromáticas, além de um bom vinho tinto. Perfeito para aqueles dias em que você quer um prato reconfortante e cheio de sabor!"
 },
 { 
     nome: "Coxão Mole",
-    descricao: "Coxão Mole Suíno é um corte suculento e macio, ideal para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Extraído da parte traseira, o coxão mole é mais macio e suculento. Perfeito para bifes e assados, pode ser acompanhado por arroz de forno e saladas variadas. Um corte versátil que vai agradar a todos os paladares!"
 },
 { 
     nome: "Filé Mignon",
-    descricao: "Filé Mignon Suíno é um corte delicado e suculento, perfeito para grelhados e assados rápidos. Com sua carne macia e saborosa, este corte é uma escolha popular para ocasiões especiais e jantares elegantes."
+    descricao: "Extraído do lombo, o filé mignon é o corte mais macio do suíno, com sabor suave e textura delicada. Ideal para grelhar ou assar, pode ser servido com molhos cremosos e legumes assados. Um corte que vai derreter na boca e impressionar seus convidados!"
 },
 { 
     nome: "Maminha",
@@ -138,15 +138,15 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Ossobuco",
-    descricao: "Ossobuco Suíno é um corte rico e reconfortante, perfeito para ensopados e cozidos. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida lentamente em molhos aromáticos."
+    descricao: "Retirado da perna do suíno, o ossobuco é um corte com osso e tutano, ideal para cozidos e ensopados. Seu sabor intenso e textura macia combinam bem com polenta cremosa e legumes cozidos. Um prato que vai aquecer seu coração e sua alma!"
 },
 { 
     nome: "Panceta",
-    descricao: "Panceta Suína é um corte suculento e saboroso, ideal para grelhados e assados lentos. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Esse clássico é extraído da barriga do suíno, a panceta é um corte suculento e saboroso, com uma textura crocante quando assada. Ideal para grelhar ou assar, pode ser acompanhada por saladas frescas e molhos à base de vinagre. Um corte que vai fazer você se apaixonar pelo sabor do suíno!"
 },
 { 
     nome: "Patinho",
-    descricao: "Patinho Suíno é um corte magro e suculento, perfeito para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida."
+    descricao: "Extraída da parte traseira, o patinho é um corte magro e macio, ideal para bifes e assados. Seu sabor suave combina bem com molhos à base de vinho e acompanhamentos como batatas assadas e saladas verdes. Um corte versátil que vai agradar a todos os paladares!"
 },
 { 
     nome: "Porqueta",
@@ -154,11 +154,11 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Prime Rib",
-    descricao: "Prime Rib Suíno é um corte suculento e saboroso, perfeito para grelhados e assados. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e reuniões familiares."
+    descricao: "Proveniente da parte superior da costela, o prime rib é um corte suculento e saboroso, com uma textura macia e marmorizada. Ideal para grelhar ou assar, pode ser acompanhado por batatas rústicas e chimichurri. Um corte que vai fazer você se sentir em um autêntico churrasco argentino!"
 },
 { 
     nome: "Short-Rib",
-    descricao: "Short-Rib Suíno é um corte suculento e saboroso, perfeito para grelhados e assados lentos. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Retirado da parte inferior da costela, o short rib é um corte suculento e saboroso, com uma textura macia e marmorizada. Ideal para grelhar ou assar, pode ser acompanhado por batatas rústicas e chimichurri. Um corte que vai fazer você se sentir em um autêntico churrasco argentino!"
 },
 { 
     nome: "Suan",
@@ -166,15 +166,15 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "T-Bone",
-    descricao: "T-Bone Suíno é um corte suculento e cheio de sabor, perfeito para grelhados e assados. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Proveniente da parte traseira do suíno, o T-Bone é um corte suculento e saboroso, com uma textura macia e marmorizada. Ideal para grelhar ou assar, pode ser acompanhado por batatas rústicas e chimichurri. Um corte que vai fazer você se sentir em um autêntico churrasco argentino!"
 },
 { 
     nome: "Tomahawk",
-    descricao: "Tomahawk Suíno é um corte suculento e saboroso, conhecido por sua apresentação impressionante e sabor rico. Com sua carne macia e suculenta, este corte é uma escolha popular para ocasiões especiais e churrascos."
+    descricao: "Retirado da parte superior da costela, o tomahawk é um corte suculento e saboroso, com uma textura macia e marmorizada. É o prime rib e ancho junto com o maior dos ossos da costela. Ideal para grelhar ou assar, pode ser acompanhado por batatas rústicas e chimichurri. Um corte que pode abrilhantar sua ceia ou aquele churrasco especial."
 },
 { 
     nome: "Lagarto",
-    descricao: "Lagarto Suíno é um corte versátil e saboroso, ideal para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida e ensopados."
+    descricao: "Extraída da parte traseira, a maminha é um corte suculento e macio, com um sabor suave e levemente adocicado. Ideal para grelhar ou assar, pode ser acompanhada por legumes grelhados e um bom vinho tinto. Um corte que vai elevar seu churrasco a outro nível!"
 },
 { 
     nome: "Carré Francês",
@@ -186,27 +186,27 @@ const descricoes: {nome: string, descricao: string}[] =[{
 },
 { 
     nome: "Carré-da-bisteca",
-    descricao: "Carré-da-bisteca Suíno é um corte suculento e saboroso, ideal para grelhados e assados rápidos. Com sua carne macia e suculenta, este corte é uma escolha popular para churrascos e refeições em família."
+    descricao: "Extraído da mesma região do carré francês (parte superior do lombo), esse corte tem maior extensão e é feito com uma finalização em formato de bisteca. O carré da bisteca é um corte suculento e saboroso, com uma textura macia e marmorizada. Ideal para grelhar ou assar, pode ser acompanhado por batatas rústicas e chimichurri."
 },
 { 
     nome: "Costela",
-    descricao: "Costela Suína é um corte suculento e saboroso, perfeito para churrascos e assados lentos. Com sua carne macia e suculenta, este corte é uma escolha popular para refeições em família e eventos ao ar livre."
+    descricao: "Retirada da parte central do suíno, a costela em ripa é rica em sabor e possui uma textura suculenta. Ideal para churrascos, combina bem com farofa e vinagrete. Prepare-se para um churrasco inesquecível com esse corte clássico!"
 },
 { 
     nome: "Paleta",
-    descricao: "Paleta Suína é um corte versátil e saboroso, perfeito para assados lentos e preparações de panela. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida e ensopados."
+    descricao: "Proveniente da parte dianteira do suíno, a paleta é um corte suculento e saboroso, ideal para assados e cozidos. Seu sabor intenso e textura macia combinam bem com farofa e vinagrete. Um corte clássico que nunca sai de moda!"
 },
 { 
     nome: "Joelho",
-    descricao: "Joelho Suíno é um corte suculento e saboroso, ideal para ensopados e cozidos. Com sua carne macia e suculenta, este corte é uma escolha popular para pratos de carne cozida lentamente em molhos aromáticos."
+    descricao: "Extraído da parte traseira do suíno, o joelho é um corte suculento e saboroso, ideal para cozidos e ensopados. Seu sabor intenso e textura macia combinam bem com polenta cremosa e legumes cozidos.  Um prato que vai aquecer seu coração e sua alma!"
 },
 { 
     nome: "Pés",
-    descricao: "Pés Suínos são uma iguaria apreciada em muitas cozinhas ao redor do mundo. Com sua carne macia e saborosa, esses pés são ideais para preparações de sopa e cozidos."
+    descricao: "O pé é um corte suculento e saboroso, ideal para cozidos e ensopados. Seu sabor intenso e textura macia combinam bem com polenta cremosa e legumes cozidos. Um prato que vai aquecer seu coração e sua alma!"
 },
 { 
     nome: "Toucinho",
-    descricao: "Toucinho Suíno é um ingrediente versátil e saboroso, ideal para adicionar sabor e textura a uma variedade de pratos. Com sua gordura rica e sabor intensamente salgado, este ingrediente é uma escolha popular na culinária tradicional."
+    descricao: "Retalhos de couro/pele in natura extraídos do suíno ideal para temperar e fazer o tira-gosto mais tradicional do barzinho, a pururuca. Combinam bem com farofa e vinagrete, um clássico que nunca sai de moda!"
 }
 ] 
 
@@ -300,17 +300,17 @@ export function Container (){
       </Modal>
       <div className="w-full bg-[white] min-h-[100vh]" style={{alignItems:"center"}}>
         
-        <div className="h-[100vw] max-[425px]:h-[200vw]">
+        <div className="h-[100vw] max-[425px]:h-[200vw] p-[8rem]">
             <div className={`w-full h-[40vw]`}> 
                 <div className="flex justify-between px-[5rem] pt-[5%] max-[425px]:flex-wrap ">
                     <div className='h-[30vw] flex mr-[2vw] w-[30rem] max-[425px]:w-[50vw] max-[425px]:h-[50vw]'>
                     <button onClick={()=>{openModal(); setImageProps(corte?.src)}} className='h-[20rem] p-0 rounded-[2vw] w-[30rem] bg-white flex justify-center items-center'><img src={corte?.src} className="object-cover h-full w-full rounded-[2vw]"/></button>
                         <div className='ml-[1rem]'>
-                            <button onClick={()=>{openModal(); setImageProps(corte?.srcEmbalado)}} className='h-[10rem] p-0  w-[10rem] bg-white  flex justify-center items-center'><img src={corte?.srcEmbalado} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button>
-                            <button onClick={()=>{openModal(); setImageProps(corte?.srcNutricional)}}className='h-[10rem] p-0  w-[10rem] bg-white flex justify-center items-center'><img src={corte?.srcNutricional} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button>
+                            {corte?.srcEmbalado ? <button onClick={()=>{openModal(); setImageProps(corte?.srcEmbalado)}} className='h-[10rem] p-0  w-[10rem] bg-white  flex justify-center items-center'><img src={corte?.srcEmbalado} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button> : null}
+                            {corte?.srcNutricional ? <button onClick={()=>{openModal(); setImageProps(corte?.srcNutricional)}}className='h-[10rem] p-0  w-[10rem] bg-white flex justify-center items-center'><img src={corte?.srcNutricional} className="object-cover h-[10rem] w-[10rem] rounded-[2vw] hover:border-black"/></button>:null}
                         </div>
                     </div>
-                        <div className="w-[50%] max-[425px]:w-full max-[425px]:mt-[3vw]">
+                        <div className="w-[40%] max-[425px]:w-full max-[425px]:mt-[3vw]">
                                 <h2 className="text-black text-left text-[2.5vw] mb-[7%] max-[425px]:text-[4vw]">{nome}</h2>
                                 <h1 className="text-black text-justify mt-[2%] max-[425px]:text-[3vw]">{corteSelecionado?.descricao}</h1>
                         </div>

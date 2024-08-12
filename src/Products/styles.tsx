@@ -7,7 +7,8 @@ import refeicaoSuine from '../assets/Cortes/Refeicao/Suinos'
 import lanche from '../assets/Cortes/Lanche'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import { useParams } from "react-router-dom";
+import list from '../assets/Cortes/Embalados/Suinos'
 type Lista = {
     nome: string
     src: string
@@ -31,6 +32,7 @@ function Image(src: string, width: string){
 }
 
 function Content (){
+    
     return (
         <div className="flex pt-[5vw] ">
             <div className="w-[70%] flex-col justify-between max-[425px]:w-full"> 
@@ -58,10 +60,12 @@ function Content (){
 }
 
 function Selection(){
+    const { tipo } = useParams();
+
     const [text, setText] = useState("Quando pensamos em um churrasco perfeito, a escolha dos cortes de carne é crucial. Existem certos cortes que são ideais para o seu churrasco, que irão garantir um sabor inigualável e uma experiência gastronômica memorável para você e seus convidados.")
     const [type, setType] = useState("01")
     const productsOvine : Lista[]=  type == "01" ? churrascoListOvine : type == "02" ? refeicaoOvine : type == "03" ? lanche : []
-    const productsSuine : Lista[]=  type == "01" ? churrascoListSuine : type == "02" ? refeicaoSuine : []
+    const productsSuine : Lista[]=  type == "01" ? list : type == "02" ? refeicaoSuine : []
 
     return(
         <div>
@@ -77,10 +81,8 @@ function Selection(){
                 <h1 className="text-black text-left max-[425px]:text-[3vw]">{text}</h1>
             </div>
 
-            {type == "03" ? null : <h2 className="text-black text-left text-[2vw] mt-[5%] max-[425px]:text-[4vw]">OVINOS</h2>}
-            {Products(productsOvine)}
-            {/* {type == "03" ? null : <h2 className="text-black text-left text-[2vw] mt-[5%] max-[425px]:text-[4vw]">SUÍNOS</h2>}
-            {Products(productsSuine)} */}
+            {tipo == "ovinos" ? type == "03" ? null : <><h2 className="text-black text-left text-[2vw] mt-[5%] max-[425px]:text-[4vw]">OVINOS</h2> {Products(productsOvine)}</> : 
+            <>{type == "03" ? null : <h2 className="text-black text-left text-[2vw] mt-[5%] max-[425px]:text-[4vw]">SUÍNOS</h2>} {Products(productsSuine)}</> }
         </div>
      
     )

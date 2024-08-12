@@ -152,7 +152,7 @@ export function Container (){
                     <h5 className="text-white text-[2.5vw] max-[425px]:text-[3.5vw]">A sua confiança é o mais importante</h5>
                 </div>
 
-                <div className="h-[20vw] px-[15%] max-[425px]:h-[30vw]" style={{backgroundImage:bg2, backgroundSize: 'cover'}}>
+                {/* <div className="h-[20vw] px-[15%] max-[425px]:h-[30vw]" style={{backgroundImage:bg2, backgroundSize: 'cover'}}>
                     <Carousel autoPlay={true} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]} responsive={responsive} className="w-full h-full">
                             {
                                 churrascoListOvine.map(() => (
@@ -164,7 +164,7 @@ export function Container (){
                                 ))
                             }
                     </Carousel>
-                </div>
+                </div> */}
 
                 <div className="flex my-[5%] justify-between"> 
                     <img src={time} className="w-[50%] max-[425px]:w-[40%] object-contain"></img>
