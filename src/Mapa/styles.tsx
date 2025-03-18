@@ -1,5 +1,5 @@
 import React from "react";
-import { bg02mapa, bgmapa, catalogo, mapa, } from "../assets"
+import { bg02mapa, bgmapa, catalogo, mapa, mapapng, } from "../assets"
 import 'react-multi-carousel/lib/styles.css';
 import Modal from 'react-modal';
 import { Formik } from "formik";
@@ -21,6 +21,7 @@ export function Container (){
     const bg2 = `url(${bg02mapa})`;
     const h01 = `url(${bgmapa})`;
     const h02 = `url(${mapa})`;
+    // const h03 = `url(${mapapng})`;
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -91,11 +92,96 @@ export function Container (){
             </Modal>
 
             <div className="w-full min-h-[100vh]" style={{alignItems:"center"}}>
+                {/* Banner do GALO */}
                 <div className={`w-full h-[34vw] items-center flex px-[10vw]`} style={{backgroundImage:h01, backgroundSize: 'cover'}}>
                 </div>
-                <div className={`w-full h-[79vw] flex justify-center items-center  max-[425px]:h-[110vw]`} style={{backgroundImage:h02, backgroundSize: 'cover'}}>
+
+                {/* Contêiner MAPA */}
+                {/* <div className={`w-full h-[79vw] flex justify-between items-center max-[425px]:h-[110vw] relative bg-black px-[7vw]`}> */}
+                <div className={`w-full h-[79vw] flex justify-between items-center max-[425px]:h-[110vw] relative px-[7vw]`} 
+                    style={{ backgroundImage:h02, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    
+                    {/* Contêiner para alinhamento lado a lado */}
+                    <div className="w-full flex justify-between items-center px-[5vw]">
                         
+                        {/* Contêiner de Botões */}
+                        {/* className = "absolute left-[0vw] top-1/2 transform -translate-y-1/2 ........... */}
+                        <div className="flex flex-col space-y-3 pl-[2vw] items-stretch"
+                            style={{ fontFamily: "'Poppins', cursive" }}>
+                            <div className="text-white text-[4vw] max-[425px]:text-[3vw] text-center"
+                                style={{ fontFamily: "'Abril Fatface', cursive" }}
+                            >
+                                Mapa D'Corthes
+                            </div>
+                            <div className="bg-[rgba (29, 30, 27, 1)] text-white font-bold px-[2vw] py-[1vw] rounded-[0.5vw] text-[1.1vw] max-[425px]:text-[3vw] text-center">
+                                Zona Leste
+                            </div>
+                            <a href="https://maps.app.goo.gl/vggbDpR6pnc8xhSV8" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Armazém Dom Severino
+                                </button>
+                            </a>
+                            <a href="https://maps.app.goo.gl/bdfAJm9qhwcCHH3K7" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    WCarnes Prime
+                                </button>
+                            </a>
+                            <a href="https://maps.app.goo.gl/cV4Tt8L33gPjoXP78" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Boteco do Zé Original
+                                </button>
+                            </a>
+                            <a href="https://maps.app.goo.gl/Y1pxD7fr8bDXA2gk7" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Tenda Mangangá Leste
+                                </button>
+                            </a>
+
+                            <div className="bg-[rgba (29, 30, 27, 1)] text-white font-bold px-[2vw] py-[1vw] rounded-[0.5vw] text-[1.1vw] max-[425px]:text-[3vw] text-center">
+                                Zona Sul
+                            </div>
+                            <a href="https://maps.app.goo.gl/6k91KX4SAHG5EUt37" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Tenda Mangangá
+                                </button>
+                            </a>
+
+                            <div className="bg-[rgba (29, 30, 27, 1)] text-white font-bold px-[2vw] py-[1vw] rounded-[0.5vw] text-[1.1vw] max-[425px]:text-[3vw] text-center">
+                                Zona Norte
+                            </div>
+                            <a href="https://maps.app.goo.gl/D1B7P1DAXNAH3aSZ7" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Vila Rodeio
+                                </button>
+                            </a>
+                            <a href="https://maps.app.goo.gl/WpYKN5k3rSbJKoTx9" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Cantinho do Baião
+                                </button>
+                            </a>
+
+                            <div className="bg-[rgba (29, 30, 27, 1)] text-white font-bold px-[2vw] py-[1vw] rounded-[0.5vw] text-[1.1vw] max-[425px]:text-[3vw] text-center">
+                                Zona Sudeste
+                            </div>
+                            <a href="https://maps.app.goo.gl/upNQRMaP3Um2nWV26" target="_blank" rel="noopener noreferrer">
+                                <button className="bg-white text-black px-[2vw] py-[1vw] rounded-[1vw] text-[1.1vw] max-[425px]:text-[3vw]">
+                                    Frigorífico JM
+                                </button>
+                            </a>
+                        </div>
+                        
+                        {/* Imagem do Mapa .png */}
+                        <div className="flex items-center">
+                            <img
+                                src={mapapng}
+                                alt="Descrição da imagem"
+                                className="w-[40vw] h-auto max-[425px]:w-[50vw]" // Ajustar as dimensões conforme necessário
+                            />
+                        </div>
+                    </div>
                 </div>
+
+                {/* Contêiner Menu */}
                 <div className={`w-full h-[50vw] max-[425px]:h-[160vw] flex justify-start p-[10vw] items-start`} style={{backgroundImage:bg2, backgroundSize: 'cover'}}>
                         <div className="w-[50%] max-[425px]:w-full  max-[425px]:mt-[10vw]">
                             <h2 className="text-black text-left text-[3vw] max-[425px]:text-[5vw]">Quer montar um menu com qualidade e produtos de excelência?</h2>

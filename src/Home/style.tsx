@@ -129,7 +129,7 @@ export function Container (){
 
                 <div className={`flex max-[425px]:flex-wrap  px-[15%]  justify-between w-full h-[45rem] max-[425px]:h-[150vw]  max-[425px]:bg-none items-center bg-[url(./assets/bg-imag01.webp)]`} style={{backgroundSize: 'cover'}}>
                     <iframe className="rounded-[1vw] mr-[2rem] max-w-[25vw] max-h-[45vw] w-[70rem] h-[25rem] max-[425px]:h-[50%] max-[425px]:mt-[20%] max-[425px]:w-full"
-                    src="https://www.youtube.com/embed/KTgOGKHX6bA?si=aWD4n7i-_OJUDWa9&amp;controls=0">
+                    src="https://www.youtube.com/embed/Skk2c78sUqM?si=2r56B5vC072kkOp_">
                     </iframe>
                     <div className="w-[30rem] max-[425px]:h-[50%] max-[425px]:mt-[3vw] max-[425px]:w-full">
                         <h2 className="text-black text-left text-[2rem] mb-[7%] max-[425px]:text-[4vw]">PORQUE AS PESSOAS ESCOLHEM A D'CORTHES</h2>
@@ -166,7 +166,7 @@ export function Container (){
                     </Carousel>
                 </div> */}
 
-                <div className="flex my-[5%] justify-between"> 
+                <div className="flex my-[5%] justify-between px-[5vw]"> 
                     <img src={time} className="w-[50%] max-[425px]:w-[40%] object-contain"></img>
                     <div className="w-[40%] max-[425px]:w-[60%] max-[425px]:ml-[10%]">
                         <h2 className="text-black text-left text-[2vw] mb-[7%] max-[425px]:text-[4vw]">NOSSOS PARCEIROS</h2>
@@ -238,6 +238,11 @@ export function Container (){
                         <input required type="email" onChange={handleChange("E-mail")} placeholder="E-mail" className="w-[44%] placeholder-black text-black  max-[425px]:max-[425px]:text-[3vw] max-[425px]:h-[4vw] max-[425px]:w-[60%] text-[1vw] px-[2vw] h-[3vw] rounded-[0.5vw] bg-slate-300 mr-[2vw] mb-[2vw]"></input>
                         <button style={{display:`${sending ? "" : "none"}`}} className="w-[30%] bg-blue h-[3vw] placeholder-black text-black max-[425px]:pb-[4vw]"><h1 className="text-[1vw] max-[425px]:max-[425px]:text-[3vw]">Aguarde...</h1></button>
                         <button style={{display:`${sending ? "none" : ""}`}} onClick={()=>{handleSubmit()}} className="w-[10rem] bg-black h-[2.5rem] max-[425px]:pb-[4vw]"><h1 className="text-[1rem] max-[425px]:max-[425px]:text-[3vw]">Cadastrar</h1></button>
+                        <div className="w-full text-center mt-[1vw] max-[425px]:mt-[2vw]">
+                            <a href="/termos" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline text-[1vw] max-[425px]:text-[3vw]">
+                                Termos de Serviço e Política de Privacidade
+                            </a>
+                        </div>
                     </div>}</Formik>
                 </div>
             </div>
